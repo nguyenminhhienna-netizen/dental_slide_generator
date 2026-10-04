@@ -1,0 +1,840 @@
+﻿[
+    {
+        "Texts":  [
+                      "Nguyễn Vũ Bảo Ngọc - 1996",
+                      "Dr. Lê Võ Yến Nhi\rCơ sở Tp. Hồ Chí Minh"
+                  ],
+        "PicturesCount":  0,
+        "SlideNumber":  1,
+        "Pictures":  [
+
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Chief complain",
+                      "Pain in the left jaw angle\r\rClenching teeth while sleeping\r\rNo HeadacheNo clicking sound both sides\rNo neck and shoulder pain"
+                  ],
+        "PicturesCount":  0,
+        "SlideNumber":  2,
+        "Pictures":  [
+
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Dental history"
+                  ],
+        "PicturesCount":  0,
+        "SlideNumber":  3,
+        "Pictures":  [
+
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Ảnh đánh giá cột sống"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  4,
+        "Pictures":  [
+                         {
+                             "Left":  291.343,
+                             "Width":  155.266144,
+                             "ShapeName":  "Picture 3",
+                             "Top":  104,
+                             "Height":  405.306152
+                         },
+                         {
+                             "Left":  480.825684,
+                             "Width":  144.603,
+                             "ShapeName":  "Picture 2",
+                             "Top":  104,
+                             "Height":  405.306152
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Ảnh ngoài mặt"
+                  ],
+        "PicturesCount":  3,
+        "SlideNumber":  5,
+        "Pictures":  [
+                         {
+                             "Left":  19.59181,
+                             "Width":  307.2245,
+                             "ShapeName":  "Picture 2",
+                             "Top":  133.1252,
+                             "Height":  307.2245
+                         },
+                         {
+                             "Left":  326.816284,
+                             "Width":  307.2245,
+                             "ShapeName":  "Picture 3",
+                             "Top":  133.125122,
+                             "Height":  307.2245
+                         },
+                         {
+                             "Left":  634.0408,
+                             "Width":  307.2245,
+                             "ShapeName":  "Picture 8",
+                             "Top":  133.125046,
+                             "Height":  307.2245
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Ảnh góc nghiêng môi tự nhiên chụp cả 2 bên trái phải"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  6,
+        "Pictures":  [
+                         {
+                             "Left":  492.7348,
+                             "Width":  353.754974,
+                             "ShapeName":  "Picture 14",
+                             "Top":  144.122513,
+                             "Height":  353.754974
+                         },
+                         {
+                             "Left":  132.245117,
+                             "Width":  353.754974,
+                             "ShapeName":  "Picture 15",
+                             "Top":  144.122513,
+                             "Height":  353.754974
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Khép môi kín và hơi hở môi thư giãn"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  7,
+        "Pictures":  [
+                         {
+                             "Left":  486.7263,
+                             "Width":  428.2486,
+                             "ShapeName":  "Picture 4",
+                             "Top":  138.453857,
+                             "Height":  321.2196
+                         },
+                         {
+                             "Left":  39.9954338,
+                             "Width":  428.249451,
+                             "ShapeName":  "Picture 5",
+                             "Top":  138.453857,
+                             "Height":  321.2197
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cười tươi và vừa cười vừa há hở răng cửa dưới"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  8,
+        "Pictures":  [
+                         {
+                             "Left":  477.4401,
+                             "Width":  451.287231,
+                             "ShapeName":  "Picture 4",
+                             "Top":  164.5385,
+                             "Height":  253.876144
+                         },
+                         {
+                             "Left":  18.8046455,
+                             "Width":  451.418427,
+                             "ShapeName":  "Picture 5",
+                             "Top":  164.5385,
+                             "Height":  253.876144
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cười lớn lộ răng chụp góc nghiêng"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  9,
+        "Pictures":  [
+                         {
+                             "Left":  142.530716,
+                             "Width":  324.550385,
+                             "ShapeName":  "Picture 3",
+                             "Top":  110.165909,
+                             "Height":  406.098419
+                         },
+                         {
+                             "Left":  488.816376,
+                             "Width":  325.1008,
+                             "ShapeName":  "Picture 5",
+                             "Top":  110.165909,
+                             "Height":  406.0985
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cắn chặt và để hở rang cửa có banh miệng"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  10,
+        "Pictures":  [
+                         {
+                             "Left":  482.631256,
+                             "Width":  428.105347,
+                             "ShapeName":  "Picture 3",
+                             "Top":  166.530319,
+                             "Height":  240.773941
+                         },
+                         {
+                             "Left":  52.4472427,
+                             "Width":  428.04245,
+                             "ShapeName":  "Picture 6",
+                             "Top":  166.5304,
+                             "Height":  240.773941
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cắn chặt răng chụp bên trái – bên phải"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  11,
+        "Pictures":  [
+                         {
+                             "Left":  482.771423,
+                             "Width":  451.269379,
+                             "ShapeName":  "Picture 2",
+                             "Top":  172.408112,
+                             "Height":  253.7878
+                         },
+                         {
+                             "Left":  28.3702354,
+                             "Width":  453.3193,
+                             "ShapeName":  "Picture 3",
+                             "Top":  172.39032,
+                             "Height":  255.017715
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Chụp xiên ko banh môi lấy mặt trong và mặt nhai từng bên"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  12,
+        "Pictures":  [
+                         {
+                             "Left":  100.636063,
+                             "Width":  325.984558,
+                             "ShapeName":  "Picture 4",
+                             "Top":  91.53047,
+                             "Height":  434.5312
+                         },
+                         {
+                             "Left":  538.6846,
+                             "Width":  325.984558,
+                             "ShapeName":  "Picture 5",
+                             "Top":  91.4417343,
+                             "Height":  434.708649
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cắn chặt và cắn ra trước đối đầu nhau"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  13,
+        "Pictures":  [
+                         {
+                             "Left":  476.248016,
+                             "Width":  424.9604,
+                             "ShapeName":  "Picture 3",
+                             "Top":  158.70401,
+                             "Height":  239.02
+                         },
+                         {
+                             "Left":  48.25811,
+                             "Width":  424.942444,
+                             "ShapeName":  "Picture 4",
+                             "Top":  158.693787,
+                             "Height":  239.030151
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cắn ra trước bên trái và bên phải"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  14,
+        "Pictures":  [
+                         {
+                             "Left":  492.1885,
+                             "Width":  430.5869,
+                             "ShapeName":  "Picture 3",
+                             "Top":  143.732834,
+                             "Height":  242.277954
+                         },
+                         {
+                             "Left":  49.46937,
+                             "Width":  438.999359,
+                             "ShapeName":  "Picture 6",
+                             "Top":  143.732834,
+                             "Height":  246.937164
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Trượt đối đỉnh răng nanh bên trái và bên phải"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  15,
+        "Pictures":  [
+                         {
+                             "Left":  484.191956,
+                             "Width":  425.113556,
+                             "ShapeName":  "Picture 2",
+                             "Top":  175.194885,
+                             "Height":  239.186935
+                         },
+                         {
+                             "Left":  56.2040939,
+                             "Width":  425.2653,
+                             "ShapeName":  "Picture 3",
+                             "Top":  175.194885,
+                             "Height":  239.143143
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Trượt răng nanh sang phải ảnh trực diện, \u000bvà 2 bên"
+                  ],
+        "PicturesCount":  3,
+        "SlideNumber":  16,
+        "Pictures":  [
+                         {
+                             "Left":  36.47756,
+                             "Width":  292.7711,
+                             "ShapeName":  "Picture 7",
+                             "Top":  199.695755,
+                             "Height":  164.636536
+                         },
+                         {
+                             "Left":  628.764954,
+                             "Width":  292.743073,
+                             "ShapeName":  "Picture 9",
+                             "Top":  199.695755,
+                             "Height":  164.720078
+                         },
+                         {
+                             "Left":  332.511719,
+                             "Width":  292.990143,
+                             "ShapeName":  "Picture 10",
+                             "Top":  199.695755,
+                             "Height":  164.787949
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Trượt răng nanh sang trái ảnh trực diện, \u000bvà 2 bên"
+                  ],
+        "PicturesCount":  3,
+        "SlideNumber":  17,
+        "Pictures":  [
+                         {
+                             "Left":  635.4394,
+                             "Width":  295.700165,
+                             "ShapeName":  "Picture 3",
+                             "Top":  185.439758,
+                             "Height":  166.373459
+                         },
+                         {
+                             "Left":  336.115265,
+                             "Width":  295.2336,
+                             "ShapeName":  "Picture 5",
+                             "Top":  185.709137,
+                             "Height":  166.1041
+                         },
+                         {
+                             "Left":  36.61205,
+                             "Width":  295.41275,
+                             "ShapeName":  "Picture 7",
+                             "Top":  185.632675,
+                             "Height":  166.180557
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Cắn chặt và lùi hàm hết sức chụp dưới lên"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  18,
+        "Pictures":  [
+                         {
+                             "Left":  52.5303955,
+                             "Width":  424.653137,
+                             "ShapeName":  "Picture 2",
+                             "Top":  161.151581,
+                             "Height":  238.808746
+                         },
+                         {
+                             "Left":  483.428436,
+                             "Width":  424.653137,
+                             "ShapeName":  "Picture 3",
+                             "Top":  161.151581,
+                             "Height":  238.860626
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Toàn bộ hàm trên qua gương"
+                  ],
+        "PicturesCount":  1,
+        "SlideNumber":  19,
+        "Pictures":  [
+                         {
+                             "Left":  191.759445,
+                             "Width":  576.481,
+                             "ShapeName":  "Picture 2",
+                             "Top":  116.545357,
+                             "Height":  384.270935
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Chụp hàm dưới qua gương"
+                  ],
+        "PicturesCount":  1,
+        "SlideNumber":  20,
+        "Pictures":  [
+                         {
+                             "Left":  191.211975,
+                             "Width":  577.576,
+                             "ShapeName":  "Picture 3",
+                             "Top":  107.246536,
+                             "Height":  384.9984
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Video chu trình nhai thật của bệnh nhân"
+                  ],
+        "PicturesCount":  0,
+        "SlideNumber":  21,
+        "Pictures":  [
+
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Tổng hợp ảnh vào 2 khung"
+                  ],
+        "PicturesCount":  11,
+        "SlideNumber":  22,
+        "Pictures":  [
+                         {
+                             "Left":  335.877625,
+                             "Width":  155.142914,
+                             "ShapeName":  "Picture 2",
+                             "Top":  62.81622,
+                             "Height":  155.142914
+                         },
+                         {
+                             "Left":  494.449127,
+                             "Width":  154.775589,
+                             "ShapeName":  "Picture 3",
+                             "Top":  63.1835442,
+                             "Height":  154.775589
+                         },
+                         {
+                             "Left":  177.306137,
+                             "Width":  155.142914,
+                             "ShapeName":  "Picture 5",
+                             "Top":  63.1835442,
+                             "Height":  155.142914
+                         },
+                         {
+                             "Left":  652.6533,
+                             "Width":  155.3878,
+                             "ShapeName":  "Picture 6",
+                             "Top":  62.81622,
+                             "Height":  155.3878
+                         },
+                         {
+                             "Left":  400.5481,
+                             "Width":  184.372131,
+                             "ShapeName":  "Picture 7",
+                             "Top":  221.5152,
+                             "Height":  103.70929
+                         },
+                         {
+                             "Left":  400.54718,
+                             "Width":  184.417328,
+                             "ShapeName":  "Picture 8",
+                             "Top":  432.127472,
+                             "Height":  103.70929
+                         },
+                         {
+                             "Left":  400.547546,
+                             "Width":  184.399139,
+                             "ShapeName":  "Picture 9",
+                             "Top":  326.82135,
+                             "Height":  103.70929
+                         },
+                         {
+                             "Left":  177.306137,
+                             "Width":  220.349838,
+                             "ShapeName":  "Picture 10",
+                             "Top":  240.617325,
+                             "Height":  146.880859
+                         },
+                         {
+                             "Left":  587.6898,
+                             "Width":  220.351257,
+                             "ShapeName":  "Picture 11",
+                             "Top":  240.617249,
+                             "Height":  146.880951
+                         },
+                         {
+                             "Left":  588.687744,
+                             "Width":  219.353378,
+                             "ShapeName":  "Picture 12",
+                             "Top":  412.079132,
+                             "Height":  123.361336
+                         },
+                         {
+                             "Left":  177.306137,
+                             "Width":  220.349838,
+                             "ShapeName":  "Picture 13",
+                             "Top":  411.780243,
+                             "Height":  123.95929
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Khung 2, chú ý 2 ảnh góc dưới cùng 2 bên là tiến ra trước và chụp bên trái bên phải."
+                  ],
+        "PicturesCount":  11,
+        "SlideNumber":  23,
+        "Pictures":  [
+                         {
+                             "Left":  171.428665,
+                             "Width":  155.142914,
+                             "ShapeName":  "Picture 5",
+                             "Top":  56.6794472,
+                             "Height":  155.142914
+                         },
+                         {
+                             "Left":  648.148438,
+                             "Width":  154.0152,
+                             "ShapeName":  "Picture 14",
+                             "Top":  58.05819,
+                             "Height":  154.0152
+                         },
+                         {
+                             "Left":  490.0052,
+                             "Width":  154.0152,
+                             "ShapeName":  "Picture 15",
+                             "Top":  57.8071671,
+                             "Height":  154.0152
+                         },
+                         {
+                             "Left":  331.647949,
+                             "Width":  154.0152,
+                             "ShapeName":  "Picture 16",
+                             "Top":  57.8071671,
+                             "Height":  154.0152
+                         },
+                         {
+                             "Left":  582.1537,
+                             "Width":  220.009918,
+                             "ShapeName":  "Picture 17",
+                             "Top":  405.63504,
+                             "Height":  123.792755
+                         },
+                         {
+                             "Left":  171.061966,
+                             "Width":  219.907013,
+                             "ShapeName":  "Picture 18",
+                             "Top":  405.63504,
+                             "Height":  123.697639
+                         },
+                         {
+                             "Left":  394.598755,
+                             "Width":  184.393311,
+                             "ShapeName":  "Picture 25",
+                             "Top":  213.1845,
+                             "Height":  103.70929
+                         },
+                         {
+                             "Left":  394.25827,
+                             "Width":  184.73378,
+                             "ShapeName":  "Picture 26",
+                             "Top":  425.397949,
+                             "Height":  103.934723
+                         },
+                         {
+                             "Left":  394.598663,
+                             "Width":  184.393387,
+                             "ShapeName":  "Picture 27",
+                             "Top":  319.2896,
+                             "Height":  103.712517
+                         },
+                         {
+                             "Left":  198.6026,
+                             "Width":  165.418579,
+                             "ShapeName":  "Picture 28",
+                             "Top":  198.305832,
+                             "Height":  220.499847
+                         },
+                         {
+                             "Left":  609.5576,
+                             "Width":  165.07724,
+                             "ShapeName":  "Picture 29",
+                             "Top":  198.165283,
+                             "Height":  220.134644
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "2 ảnh đường thở: 1 ảnh há lớn chụp vào lưỡi gà, 1 ảnh lè lưỡi chụp vào lưỡi gà."
+                  ],
+        "PicturesCount":  9,
+        "SlideNumber":  24,
+        "Pictures":  [
+                         {
+                             "Left":  131.298737,
+                             "Width":  227.642365,
+                             "ShapeName":  "Picture 12",
+                             "Top":  52.4920464,
+                             "Height":  170.699448
+                         },
+                         {
+                             "Left":  601.84906,
+                             "Width":  227.599213,
+                             "ShapeName":  "Picture 15",
+                             "Top":  225.776779,
+                             "Height":  170.699524
+                         },
+                         {
+                             "Left":  131.298737,
+                             "Width":  227.505508,
+                             "ShapeName":  "Picture 17",
+                             "Top":  225.892288,
+                             "Height":  170.65535
+                         },
+                         {
+                             "Left":  367.007233,
+                             "Width":  227.264328,
+                             "ShapeName":  "Picture 18",
+                             "Top":  225.776779,
+                             "Height":  170.4685
+                         },
+                         {
+                             "Left":  601.84906,
+                             "Width":  227.599213,
+                             "ShapeName":  "Picture 19",
+                             "Top":  52.49197,
+                             "Height":  170.699448
+                         },
+                         {
+                             "Left":  366.652039,
+                             "Width":  227.619522,
+                             "ShapeName":  "Picture 20",
+                             "Top":  52.3765373,
+                             "Height":  170.699448
+                         },
+                         {
+                             "Left":  366.65213,
+                             "Width":  227.619446,
+                             "ShapeName":  "Picture 22",
+                             "Top":  400.4315,
+                             "Height":  128.032288
+                         },
+                         {
+                             "Left":  130.334015,
+                             "Width":  227.505508,
+                             "ShapeName":  "Picture 23",
+                             "Top":  400.6389,
+                             "Height":  127.940392
+                         },
+                         {
+                             "Left":  601.6016,
+                             "Width":  227.846619,
+                             "ShapeName":  "Picture 24",
+                             "Top":  400.4315,
+                             "Height":  128.1478
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "9mm                              7mm"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  25,
+        "Pictures":  [
+                         {
+                             "Left":  486.586853,
+                             "Width":  458.97937,
+                             "ShapeName":  "Picture 2",
+                             "Top":  116.813782,
+                             "Height":  344.2345
+                         },
+                         {
+                             "Left":  21.6147251,
+                             "Width":  459.066132,
+                             "ShapeName":  "Picture 3",
+                             "Top":  116.813782,
+                             "Height":  344.2345
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "13mm"
+                  ],
+        "PicturesCount":  1,
+        "SlideNumber":  26,
+        "Pictures":  [
+                         {
+                             "Left":  221.9426,
+                             "Width":  516.1148,
+                             "ShapeName":  "Picture 2",
+                             "Top":  102.796692,
+                             "Height":  387.051666
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Xquang"
+                  ],
+        "PicturesCount":  1,
+        "SlideNumber":  27,
+        "Pictures":  [
+                         {
+                             "Left":  101.740471,
+                             "Width":  756.519,
+                             "ShapeName":  "Picture 2",
+                             "Top":  90.61228,
+                             "Height":  413.4392
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Đường thở"
+                  ],
+        "PicturesCount":  1,
+        "SlideNumber":  28,
+        "Pictures":  [
+                         {
+                             "Left":  284.302917,
+                             "Width":  391.394165,
+                             "ShapeName":  "Picture 2",
+                             "Top":  87.6735458,
+                             "Height":  435.103149
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "TMJ cung 1"
+                  ],
+        "PicturesCount":  3,
+        "SlideNumber":  29,
+        "Pictures":  [
+                         {
+                             "Left":  18.1613388,
+                             "Width":  374.139618,
+                             "ShapeName":  "Picture 1",
+                             "Top":  133.127243,
+                             "Height":  277.5608
+                         },
+                         {
+                             "Left":  394.777252,
+                             "Width":  262.774567,
+                             "ShapeName":  "Picture 2",
+                             "Top":  133.127319,
+                             "Height":  277.560852
+                         },
+                         {
+                             "Left":  660.028137,
+                             "Width":  249.220322,
+                             "ShapeName":  "Picture 6",
+                             "Top":  133.125046,
+                             "Height":  277.563
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "TMJ cung 2"
+                  ],
+        "PicturesCount":  3,
+        "SlideNumber":  30,
+        "Pictures":  [
+                         {
+                             "Left":  11.0385828,
+                             "Width":  407.771881,
+                             "ShapeName":  "Picture 2",
+                             "Top":  133.305359,
+                             "Height":  282.9696
+                         },
+                         {
+                             "Left":  420.415131,
+                             "Width":  256.9727,
+                             "ShapeName":  "Picture 3",
+                             "Top":  133.125046,
+                             "Height":  283.149841
+                         },
+                         {
+                             "Left":  678.992432,
+                             "Width":  263.877869,
+                             "ShapeName":  "Picture 4",
+                             "Top":  133.125046,
+                             "Height":  283.149841
+                         }
+                     ]
+    },
+    {
+        "Texts":  [
+                      "Xem cả 2 bên"
+                  ],
+        "PicturesCount":  2,
+        "SlideNumber":  31,
+        "Pictures":  [
+                         {
+                             "Left":  66,
+                             "Width":  428.393219,
+                             "ShapeName":  "Picture 2",
+                             "Top":  77.38787,
+                             "Height":  428.393219
+                         },
+                         {
+                             "Left":  498.538574,
+                             "Width":  388.8492,
+                             "ShapeName":  "Picture 3",
+                             "Top":  77.3879547,
+                             "Height":  428.393158
+                         }
+                     ]
+    }
+]

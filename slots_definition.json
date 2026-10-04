@@ -1,0 +1,481 @@
+﻿[
+    {
+        "id":  1,
+        "name":  "Cột sống - Đứng thẳng",
+        "slide":  4,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Cột sống"
+    },
+    {
+        "id":  2,
+        "name":  "Cột sống - Đứng nghiêng",
+        "slide":  4,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Cột sống"
+    },
+    {
+        "id":  3,
+        "name":  "Ngoài mặt - Mặt thẳng nghỉ",
+        "slide":  5,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 22 (Hàng 1, Ô 2)",
+                           "Slide 23 (Hàng 1, Ô 2)"
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  4,
+        "name":  "Ngoài mặt - Mặt thẳng cười",
+        "slide":  5,
+        "picIdx":  1,
+        "sharedWith":  [
+                           "Slide 22 (Hàng 1, Ô 3)",
+                           "Slide 23 (Hàng 1, Ô 3)"
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  5,
+        "name":  "Ngoài mặt - Nghiêng phải 90°",
+        "slide":  5,
+        "picIdx":  2,
+        "sharedWith":  [
+                           "Slide 22 (Hàng 1, Ô 1)",
+                           "Slide 23 (Hàng 1, Ô 1)"
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  6,
+        "name":  "Nghiêng môi tự nhiên - Trái",
+        "slide":  6,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  7,
+        "name":  "Nghiêng môi tự nhiên - Phải",
+        "slide":  6,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  8,
+        "name":  "Khép môi kín",
+        "slide":  7,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  9,
+        "name":  "Hở môi thư giãn",
+        "slide":  7,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  10,
+        "name":  "Cười tươi há hở răng cửa",
+        "slide":  8,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 22 (Hàng 1, Ô 4)",
+                           "Slide 23 (Hàng 1, Ô 4)"
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  11,
+        "name":  "Cười lớn nghiêng - Trái",
+        "slide":  9,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  12,
+        "name":  "Cười lớn nghiêng - Phải",
+        "slide":  9,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Ngoài mặt"
+    },
+    {
+        "id":  13,
+        "name":  "Cắn chặt có banh miệng (Trực diện)",
+        "slide":  10,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 22 (Giữa, Hàng 2)",
+                           "Slide 23 (Giữa, Hàng 2)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  14,
+        "name":  "Để hở răng cửa có banh miệng",
+        "slide":  10,
+        "picIdx":  1,
+        "sharedWith":  [
+                           "Slide 22 (Giữa, Hàng 3)",
+                           "Slide 23 (Giữa, Hàng 3)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  15,
+        "name":  "Cắn chặt bên trái",
+        "slide":  11,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 22 (Góc dưới trái)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  16,
+        "name":  "Cắn chặt bên phải",
+        "slide":  11,
+        "picIdx":  1,
+        "sharedWith":  [
+                           "Slide 22 (Góc dưới phải)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  17,
+        "name":  "Chụp xiên không banh - Trái",
+        "slide":  12,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  18,
+        "name":  "Chụp xiên không banh - Phải",
+        "slide":  12,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  19,
+        "name":  "Cắn chặt trực diện đối đầu",
+        "slide":  13,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  20,
+        "name":  "Cắn ra trước đối đầu nhau",
+        "slide":  13,
+        "picIdx":  1,
+        "sharedWith":  [
+                           "Slide 22 (Giữa, Hàng 4)",
+                           "Slide 23 (Giữa, Hàng 4)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  21,
+        "name":  "Cắn ra trước bên trái",
+        "slide":  14,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 23 (Góc dưới trái)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  22,
+        "name":  "Cắn ra trước bên phải",
+        "slide":  14,
+        "picIdx":  1,
+        "sharedWith":  [
+                           "Slide 23 (Góc dưới phải)"
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  23,
+        "name":  "Trượt đối đỉnh nanh bên trái",
+        "slide":  15,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  24,
+        "name":  "Trượt đối đỉnh nanh bên phải",
+        "slide":  15,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  25,
+        "name":  "Trượt nanh sang phải - Trực diện",
+        "slide":  16,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  26,
+        "name":  "Trượt nanh sang phải - Bên trái",
+        "slide":  16,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  27,
+        "name":  "Trượt nanh sang phải - Bên phải",
+        "slide":  16,
+        "picIdx":  2,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  28,
+        "name":  "Trượt nanh sang trái - Trực diện",
+        "slide":  17,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  29,
+        "name":  "Trượt nanh sang trái - Bên trái",
+        "slide":  17,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  30,
+        "name":  "Trượt nanh sang trái - Bên phải",
+        "slide":  17,
+        "picIdx":  2,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Vận động hàm"
+    },
+    {
+        "id":  31,
+        "name":  "Cắn chặt chụp từ dưới lên",
+        "slide":  18,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  32,
+        "name":  "Lùi hàm hết sức chụp dưới lên",
+        "slide":  18,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp cắn"
+    },
+    {
+        "id":  33,
+        "name":  "Toàn bộ hàm trên qua gương",
+        "slide":  19,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 22 (Ô lớn trái)",
+                           "Slide 23 (Ô lớn trái)"
+                       ],
+        "category":  "Cung răng"
+    },
+    {
+        "id":  34,
+        "name":  "Chụp hàm dưới qua gương",
+        "slide":  20,
+        "picIdx":  0,
+        "sharedWith":  [
+                           "Slide 22 (Ô lớn phải)",
+                           "Slide 23 (Ô lớn phải)"
+                       ],
+        "category":  "Cung răng"
+    },
+    {
+        "id":  35,
+        "name":  "Đo đạc khớp cắn 9mm",
+        "slide":  25,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Đo đạc \u0026 Phim"
+    },
+    {
+        "id":  36,
+        "name":  "Đo đạc khớp cắn 7mm",
+        "slide":  25,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Đo đạc \u0026 Phim"
+    },
+    {
+        "id":  37,
+        "name":  "Đo đạc khớp cắn 13mm",
+        "slide":  26,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Đo đạc \u0026 Phim"
+    },
+    {
+        "id":  38,
+        "name":  "Phim X-quang toàn cảnh / sọ nghiêng",
+        "slide":  27,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Đo đạc \u0026 Phim"
+    },
+    {
+        "id":  39,
+        "name":  "Phim đường thở",
+        "slide":  28,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Đo đạc \u0026 Phim"
+    },
+    {
+        "id":  40,
+        "name":  "TMJ cung 1 (Hình 1)",
+        "slide":  29,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  41,
+        "name":  "TMJ cung 1 (Hình 2)",
+        "slide":  29,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  42,
+        "name":  "TMJ cung 1 (Hình 3)",
+        "slide":  29,
+        "picIdx":  2,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  43,
+        "name":  "TMJ cung 2 (Hình 1)",
+        "slide":  30,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  44,
+        "name":  "TMJ cung 2 (Hình 2)",
+        "slide":  30,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  45,
+        "name":  "TMJ cung 2 (Hình 3)",
+        "slide":  30,
+        "picIdx":  2,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  46,
+        "name":  "Xem cả 2 bên TMJ (Hình 1)",
+        "slide":  31,
+        "picIdx":  0,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    },
+    {
+        "id":  47,
+        "name":  "Xem cả 2 bên TMJ (Hình 2)",
+        "slide":  31,
+        "picIdx":  1,
+        "sharedWith":  [
+
+                       ],
+        "category":  "Khớp TMJ"
+    }
+]

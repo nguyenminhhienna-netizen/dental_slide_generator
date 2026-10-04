@@ -1,0 +1,9 @@
+﻿{
+    "BirthYear":  "2000",
+    "SlotFiles":  {
+
+                  },
+    "PatientName":  "Test Blank",
+    "DoctorName":  "Doctor Test",
+    "OutputPath":  "C:\\Users\\PC\\.gemini\\antigravity\\scratch\\dental_slide_generator\\test_empty_slots.pptx"
+}

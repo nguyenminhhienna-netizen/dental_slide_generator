@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nha Khoa Thùy Anh - Hệ Thống Tạo 31 Slide Bệnh Án Lâm Sàng TMD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+    .brand-green { color: #68B42E; }
+    .bg-brand-green { background-color: #68B42E; }
+    .brand-navy { color: #0C4D7F; }
+    .bg-brand-navy { background-color: #0C4D7F; }
+    .slide-card { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .slide-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08); }
+    .drop-zone { transition: all 0.2s ease; }
+    .drop-zone.drag-over { border-color: #68B42E; background-color: #F0FDF4; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <!-- Logo chuẩn thương hiệu nguyên bản 100% -->
+        <img src="/assets/logo.png" alt="Nha Khoa Thùy Anh" class="h-10 object-contain">
+        <div class="border-l border-slate-300 pl-4">
+          <div class="flex items-center space-x-2">
+            <h1 class="text-sm font-bold text-slate-800 tracking-tight">HỆ THỐNG TẠO SLIDE LÂM SÀNG TỰ ĐỘNG</h1>
+            <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-[11px] font-extrabold rounded-full border border-emerald-300">
+              ĐÚNG 31 SLIDE CHUẨN
+            </span>
+          </div>
+          <p class="text-xs text-slate-500">Chuyên đề Khớp Thái Dương Hàm (TMD) - Chuẩn Bệnh Án Phòng Khám</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <button id="btnOpenGuideModal" class="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 rounded-lg text-xs font-semibold flex items-center transition">
+          <i class="fa-solid fa-list-ol mr-1.5 text-blue-600"></i> Bảng STT Đổi Tên Ảnh (1.jpg -> 52.jpg)
+        </button>
+        <button id="btnAutoMatchFolder" class="px-3 py-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-300 rounded-lg text-xs font-semibold flex items-center transition">
+          <i class="fa-solid fa-folder-open mr-1.5"></i> Chọn thư mục nạp hàng loạt
+        </button>
+        <input type="file" id="folderInput" webkitdirectory directory multiple class="hidden">
+        <button id="btnGenerate" class="px-4 py-2 bg-brand-navy hover:bg-blue-900 text-white rounded-lg text-xs font-bold shadow-md flex items-center transition">
+          <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-yellow-300"></i> XUẤT 31 SLIDE POWERPOINT
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Folder Path Bar -->
+  <div class="bg-emerald-50/80 border-b border-emerald-200 py-2.5 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-3 text-xs flex-wrap">
+      <div class="flex items-center space-x-2 text-emerald-900 font-bold shrink-0">
+        <i class="fa-solid fa-folder-tree text-emerald-600 text-sm"></i>
+        <span>Nhập đường dẫn thư mục ảnh trên máy tính:</span>
+      </div>
+      <div class="flex-1 min-w-[280px] flex items-center space-x-2">
+        <input type="text" id="localFolderPathInput" placeholder="Dán đường dẫn thư mục ảnh vào đây (VD: D:\Tong Quat\Khop thai duong ham\Ngoc...)" class="flex-1 px-3 py-1.5 bg-white border border-emerald-300 rounded-lg text-xs outline-none focus:ring-2 focus:ring-emerald-500 shadow-inner">
+        <button id="btnScanFolder" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg text-xs flex items-center transition shadow-sm shrink-0">
+          <i class="fa-solid fa-bolt mr-1.5 text-yellow-300"></i> Quét & Nạp Ngay
+        </button>
+      </div>
+      <div class="text-[11px] text-emerald-700 hidden sm:block">
+        <i class="fa-solid fa-circle-check text-emerald-500 mr-1"></i>Hoặc dùng nút <strong>"Chọn thư mục nạp hàng loạt"</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-5 grid grid-cols-1 lg:grid-cols-4 gap-5">
+
+    <!-- Left: Patient Information -->
+    <div class="lg:col-span-1 space-y-4">
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm sticky top-20">
+        <h2 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-3 flex items-center">
+          <i class="fa-solid fa-user-doctor text-emerald-600 mr-2"></i> 1. Thông Tin Bệnh Nhân (Slide 1 - 3)
+        </h2>
+        
+        <div class="space-y-3 text-sm">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Họ và tên bệnh nhân *</label>
+            <input type="text" id="patientName" placeholder="VD: Nguyễn Vũ Bảo Ngọc" value="Nguyễn Vũ Bảo Ngọc" 
+              class="w-full px-3 py-1.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800 text-xs">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-1">Năm sinh</label>
+              <input type="text" id="birthYear" placeholder="VD: 1996" value="1996"
+                class="w-full px-3 py-1.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800 text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-1">Bác sĩ phụ trách</label>
+              <input type="text" id="doctorName" placeholder="VD: Lê Võ Yến Nhi" value="Lê Võ Yến Nhi"
+                class="w-full px-3 py-1.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800 text-xs">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Cơ sở khám chữa</label>
+            <input type="text" id="clinicBranch" placeholder="VD: Tp. Hồ Chí Minh" value="Tp. Hồ Chí Minh"
+              class="w-full px-3 py-1.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none text-slate-800 text-xs">
+          </div>
+
+          <div class="pt-2 border-t border-slate-100">
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Chief Complain (Lý do khám) - Slide 2</label>
+            <textarea id="chiefComplaint" rows="4" 
+              class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-emerald-500 outline-none" 
+              placeholder="Nhập các triệu chứng than phiền...">Pain in the left jaw angle
+Clenching teeth while sleeping
+No Headache
+No clicking sound both sides
+No neck and shoulder pain</textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Dental History (Tiền sử) - Slide 3</label>
+            <textarea id="dentalHistory" rows="3" 
+              class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-emerald-500 outline-none" 
+              placeholder="Tiền sử điều trị nha khoa...">Tiền sử chỉnh nha / trám răng / phẫu thuật trước đó...</textarea>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500 flex items-center justify-between">
+          <span>Quy cách mẫu:</span>
+          <span class="font-bold text-slate-800">Đúng 31 Slide</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Chronological 31 Slide Cards -->
+    <div class="lg:col-span-3 space-y-3">
+      <!-- Category Tabs -->
+      <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between flex-wrap gap-2">
+        <div class="flex space-x-1 text-xs font-medium overflow-x-auto pb-1 max-w-full" id="categoryTabs">
+          <button class="cat-tab active px-3 py-1.5 rounded-lg bg-brand-navy text-white whitespace-nowrap" data-cat="all">Tất cả (31 Slide)</button>
+          <button class="cat-tab px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 whitespace-nowrap" data-cat="Thông tin chung">Thông tin chung (1-3)</button>
+          <button class="cat-tab px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 whitespace-nowrap" data-cat="Ngoài mặt">Ngoài mặt (4-9)</button>
+          <button class="cat-tab px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 whitespace-nowrap" data-cat="Khớp cắn">Khớp cắn (10-14, 18)</button>
+          <button class="cat-tab px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 whitespace-nowrap" data-cat="Vận động hàm">Vận động hàm (15-17)</button>
+          <button class="cat-tab px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 whitespace-nowrap" data-cat="Slide Tổng Hợp">Slide Tổng Hợp (22, 23)</button>
+          <button class="cat-tab px-3 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 whitespace-nowrap" data-cat="Đo đạc & Phim">Đo đạc & Phim (24-31)</button>
+        </div>
+      </div>
+
+      <!-- 31 Slide Cards Container -->
+      <div id="slidesContainer" class="space-y-4">
+        <!-- Rendered dynamically: Slide 1 to 31 in exact order -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Slide Zoom Modal -->
+  <div id="zoomModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+        <h3 id="zoomTitle" class="text-sm font-bold text-slate-800">Xem Trước Slide Hoàn Chỉnh</h3>
+        <button id="btnCloseZoomModal" class="text-slate-400 hover:text-slate-600 p-1 text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="w-full bg-slate-100 rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
+        <img id="zoomImage" src="" alt="Slide Preview" class="w-full object-contain max-h-[75vh]">
+      </div>
+      <div class="text-xs text-slate-500 text-center italic">
+        * Hình ảnh slide mẫu thực tế với logo Nha Khoa Thùy Anh và kích thước ảnh đã phóng to tối đa
+      </div>
+    </div>
+  </div>
+
+  <!-- Naming Guide Modal -->
+  <div id="guideModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 shadow-2xl space-y-4 max-h-[88vh] flex flex-col">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-list-ol text-emerald-600 text-lg"></i>
+          <div>
+            <h3 class="text-base font-bold text-slate-800">DANH SÁCH SỐ THỨ TỰ ĐỔI TÊN ẢNH (1.jpg -> 52.jpg)</h3>
+            <p class="text-xs text-slate-500">Đúng 31 Slide - Đặt tên file theo số để tự động đổ vào đúng trang</p>
+          </div>
+        </div>
+        <button id="btnCloseGuideModal" class="text-slate-400 hover:text-slate-600 text-lg p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto space-y-2 pr-1 text-xs">
+        <div class="p-3 bg-emerald-50 rounded-lg text-emerald-800 border border-emerald-200 leading-relaxed space-y-1">
+          <div class="font-bold flex items-center text-emerald-900"><i class="fa-solid fa-lightbulb text-emerald-600 mr-1.5"></i> Các điểm đồng bộ thông minh theo yêu cầu của phòng khám:</div>
+          <div>• <strong>17.jpg & 18.jpg:</strong> Mặt trong răng bên trái & bên phải (Slide 12).</div>
+          <div>• <strong>Slide 16 (Bên phải):</strong> Tự động đồng bộ từ <strong>23.jpg</strong> (Trượt đối đỉnh nanh phải).</div>
+          <div>• <strong>Slide 17 (Bên trái):</strong> Tự động đồng bộ từ <strong>22.jpg</strong> (Trượt đối đỉnh nanh trái).</div>
+          <div>• <strong>Slide 22:</strong> Nạp thêm <strong>33.jpg</strong> (Ảnh cười tươi 45 độ nghiêng phải).</div>
+          <div>• <strong>Slide 23:</strong> Nạp thêm <strong>34.jpg & 35.jpg</strong> (Ảnh cười tươi 90 độ nghiêng phải & trái).</div>
+          <div>• <strong>Slide 24:</strong> Đã bổ sung <strong>37.jpg</strong> (Chụp đường thở mũi) và <strong>39.jpg</strong> (Khuôn miệng nói "ê").</div>
+        </div>
+
+        <table class="w-full text-left border-collapse border border-slate-200">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <th class="p-2 border-r border-slate-200 w-20 text-center">Tên File</th>
+              <th class="p-2 border-r border-slate-200">Góc Chụp Lâm Sàng</th>
+              <th class="p-2 border-r border-slate-200 w-24 text-center">Nằm ở</th>
+              <th class="p-2">Ghi Chú Đặc Biệt</th>
+            </tr>
+          </thead>
+          <tbody id="guideTableBody" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+
+      <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+        <span class="text-xs text-slate-500">File văn bản: <code>DANH_SACH_DOI_TEN_ANH.txt</code> trên Desktop</span>
+        <button id="btnCloseGuideModalBtn" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg text-xs transition">
+          Đóng cửa sổ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Folder Confirmation Modal -->
+  <div id="exportConfirmModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-5 shadow-2xl space-y-4">
+      <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
+        <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-lg shrink-0">
+          <i class="fa-solid fa-folder-arrow-down"></i>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-800">Chọn Thư Mục Xuất PowerPoint</h3>
+          <p class="text-xs text-slate-500">Mặc định lưu vào thư mục Downloads của máy tính</p>
+        </div>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Tên file thành phẩm dự kiến:</label>
+          <div id="confirmFileNamePreview" class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-800 break-all text-xs"></div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Thư mục xuất file trên máy tính:</label>
+          <div class="space-y-1.5">
+            <input type="text" id="confirmExportFolderInput" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs font-mono focus:ring-2 focus:ring-emerald-500 outline-none">
+            <p class="text-[11px] text-slate-500 italic flex items-center">
+              <i class="fa-solid fa-circle-info mr-1 text-blue-500"></i> Mặc định là thư mục Downloads. Bạn có thể dán đường dẫn khác nếu muốn.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-2 flex items-center justify-end space-x-2 border-t border-slate-100">
+        <button id="btnCancelExport" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-medium text-xs transition">
+          Hủy bỏ
+        </button>
+        <button id="btnStartExport" class="px-4 py-2 bg-brand-navy hover:bg-blue-900 text-white rounded-lg font-bold text-xs shadow transition flex items-center">
+          <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-yellow-300"></i> Bắt Đầu Xuất Slide
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress / Result Modal -->
+  <div id="progressModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+      
+      <!-- 1. LOADING STATE -->
+      <div id="modalLoadingSection" class="text-center space-y-3">
+        <div id="modalSpinner" class="w-14 h-14 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+        <h3 id="modalLoadingTitle" class="text-base font-bold text-slate-800">Đang xử lý...</h3>
+        <p id="modalLoadingDesc" class="text-xs text-slate-500">Đang chuẩn bị dữ liệu...</p>
+        <div id="modalProgressBarWrap" class="w-full bg-slate-100 rounded-full h-2.5 hidden overflow-hidden border border-slate-200">
+          <div id="modalProgressBar" class="bg-emerald-500 h-2.5 rounded-full transition-all duration-200" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- 2. SUCCESS STATE -->
+      <div id="modalSuccessSection" class="text-center space-y-3 hidden">
+        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 class="text-base font-bold text-slate-800">Xuất 31 Slide Thành Công!</h3>
+        <p class="text-xs text-slate-500">File PowerPoint hoàn chỉnh đã được tạo và lưu tại:</p>
+        <div id="modalSuccessPath" class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-700 font-mono break-all text-left select-all"></div>
+        <div class="space-y-2 pt-2">
+          <button id="btnOpenPptx" class="w-full py-2.5 bg-brand-navy hover:bg-blue-900 text-white font-semibold rounded-lg text-xs shadow transition flex items-center justify-center">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> Mở File PowerPoint Ngay
+          </button>
+          <button id="btnOpenFolder" class="w-full py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold rounded-lg text-xs border border-emerald-200 transition flex items-center justify-center">
+            <i class="fa-solid fa-folder-open mr-2 text-emerald-600"></i> Mở Thư Mục Chứa File
+          </button>
+          <button class="btnCloseModalBtn w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium rounded-lg text-xs transition">
+            Đóng cửa sổ
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. ERROR STATE -->
+      <div id="modalErrorSection" class="space-y-3 hidden text-left">
+        <div class="flex items-center space-x-3 border-b border-rose-100 pb-3">
+          <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-rose-700">Xuất Slide Không Thành Công</h3>
+            <p class="text-xs text-slate-500">Đã phát hiện lỗi trong quá trình xử lý</p>
+          </div>
+        </div>
+
+        <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl space-y-1.5">
+          <div class="text-xs font-bold text-rose-800 flex items-center">
+            <i class="fa-solid fa-circle-exclamation mr-1.5 text-rose-600"></i> Nguyên nhân lỗi:
+          </div>
+          <div id="modalErrorMsg" class="text-xs text-rose-900 font-medium leading-relaxed select-all"></div>
+        </div>
+
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 space-y-1">
+          <div class="font-bold text-slate-700 flex items-center"><i class="fa-solid fa-lightbulb text-amber-500 mr-1.5"></i> Hướng dẫn khắc phục:</div>
+          <div>• <strong>Nếu file đang mở trong PowerPoint:</strong> Hãy đóng PowerPoint rồi bấm xuất lại.</div>
+          <div>• <strong>Kiểm tra ảnh:</strong> Đảm bảo tên file ảnh theo số thứ tự (ví dụ: <code>1.jpg</code> đến <code>52.jpg</code>).</div>
+          <div>• <strong>Đường dẫn thư mục:</strong> Nếu nạp bằng đường dẫn, đảm bảo thư mục tồn tại trên ổ cứng.</div>
+        </div>
+
+        <div>
+          <button id="btnToggleDetail" class="text-xs text-slate-500 hover:text-slate-700 flex items-center space-x-1 font-medium transition">
+            <i class="fa-solid fa-chevron-right text-[10px]" id="iconDetailChevron"></i>
+            <span>Xem chi tiết log kỹ thuật / stack trace</span>
+          </button>
+          <div id="modalDetailBox" class="mt-2 p-2.5 bg-slate-900 text-slate-200 font-mono text-[11px] rounded-lg max-h-40 overflow-y-auto hidden select-all break-all whitespace-pre-wrap"></div>
+        </div>
+
+        <div class="pt-2 flex items-center space-x-2">
+          <button id="btnCopyError" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg text-xs transition flex items-center">
+            <i class="fa-regular fa-copy mr-1.5"></i> Sao chép lỗi
+          </button>
+          <button class="btnCloseModalBtn flex-1 py-2 bg-brand-navy hover:bg-blue-900 text-white font-semibold rounded-lg text-xs transition">
+            Đóng cửa sổ và thử lại
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    let slidesData = [];
+    const selectedFiles = {};
+    let lastGeneratedFilePath = '';
+
+    const namingGuide = [
+      { id: 1, name: 'Cột sống - Đứng thẳng', slide: 'Slide 4', note: '' },
+      { id: 2, name: 'Cột sống - Đứng nghiêng', slide: 'Slide 4', note: '' },
+      { id: 3, name: 'Ngoài mặt - Mặt thẳng nghỉ', slide: 'Slide 5', note: '★ Tự động nhân bản vào Slide 22' },
+      { id: 4, name: 'Ngoài mặt - Mặt thẳng cười', slide: 'Slide 5', note: '★ Tự động nhân bản vào Slide 22' },
+      { id: 5, name: 'Ngoài mặt - Nghiêng phải 90°', slide: 'Slide 5', note: '★ Tự động dùng chung cho Slide 5, 6, 22, 23' },
+      { id: 6, name: 'Ngoài mặt - Nghiêng trái tự nhiên', slide: 'Slide 6', note: '★ Tự động dùng chung cho Slide 6 & 23' },
+      { id: 7, name: 'Ngoài mặt - Khép môi kín', slide: 'Slide 7', note: '' },
+      { id: 8, name: 'Ngoài mặt - Hở môi thư giãn', slide: 'Slide 7', note: '' },
+      { id: 9, name: 'Cười tươi', slide: 'Slide 8', note: '' },
+      { id: 10, name: 'Vừa cười vừa há hở răng cửa dưới', slide: 'Slide 8', note: 'Mẫu mới sửa' },
+      { id: 11, name: 'Cười lớn lộ răng chụp nghiêng trái', slide: 'Slide 9', note: '' },
+      { id: 12, name: 'Cười lớn lộ răng chụp nghiêng phải', slide: 'Slide 9', note: '' },
+      { id: 13, name: 'Cắn chặt có banh miệng (Trực diện)', slide: 'Slide 10', note: '★ Tự động dùng chung cho Slide 10, 13, 22' },
+      { id: 14, name: 'Để hở răng cửa có banh miệng', slide: 'Slide 10', note: '★ Tự động nhân bản vào Slide 22' },
+      { id: 15, name: 'Cắn chặt bên trái', slide: 'Slide 11', note: '★ Tự động nhân bản vào Slide 22' },
+      { id: 16, name: 'Cắn chặt bên phải', slide: 'Slide 11', note: '★ Tự động nhân bản vào Slide 22' },
+      { id: 17, name: 'Mặt trong răng bên trái', slide: 'Slide 12', note: 'Đã đổi tên theo yêu cầu' },
+      { id: 18, name: 'Mặt trong răng bên phải', slide: 'Slide 12', note: 'Đã đổi tên theo yêu cầu' },
+      { id: 19, name: 'Cắn ra trước đối đầu nhau', slide: 'Slide 13', note: '★ Tự động nhân bản vào Slide 23' },
+      { id: 20, name: 'Cắn ra trước bên trái', slide: 'Slide 14', note: '★ Tự động nhân bản vào Slide 23' },
+      { id: 21, name: 'Cắn ra trước bên phải', slide: 'Slide 14', note: '★ Tự động nhân bản vào Slide 23' },
+      { id: 22, name: 'Trượt đối đỉnh răng nanh bên trái', slide: 'Slide 15', note: '★ Tự động dùng cho Slide 17 (bên trái)' },
+      { id: 23, name: 'Trượt đối đỉnh răng nanh bên phải', slide: 'Slide 15', note: '★ Tự động dùng cho Slide 16 (bên phải)' },
+      { id: 24, name: 'Trượt răng nanh sang phải - Trực diện', slide: 'Slide 16', note: '★ Tự động nhân bản vào Slide 23' },
+      { id: 25, name: 'Trượt răng nanh sang phải - Bên trái', slide: 'Slide 16', note: '' },
+      { id: 26, name: 'Trượt răng nanh sang trái - Trực diện', slide: 'Slide 17', note: '★ Tự động nhân bản vào Slide 23' },
+      { id: 27, name: 'Trượt răng nanh sang trái - Bên phải', slide: 'Slide 17', note: '' },
+      { id: 28, name: 'Cắn chặt chụp từ dưới lên', slide: 'Slide 18', note: '★ Tự động nhân bản vào Slide 22 & 24' },
+      { id: 29, name: 'Lùi hàm hết sức chụp từ dưới lên', slide: 'Slide 18', note: '★ Tự động nhân bản vào Slide 24' },
+      { id: 30, name: 'Toàn bộ hàm trên qua gương', slide: 'Slide 19', note: '★ Tự động nhân bản vào Slide 22 & 23' },
+      { id: 31, name: 'Chụp hàm dưới qua gương', slide: 'Slide 20', note: '★ Tự động nhân bản vào Slide 22 & 23' },
+      { id: 32, name: 'Video chu trình nhai thật', slide: 'Slide 21', note: 'Định dạng .mp4 hoặc .jpg' },
+      { id: 33, name: 'Ngoài mặt - Cười tươi 45 độ nghiêng phải', slide: 'Slide 22', note: '★ Nạp cho Khung 1 tổng hợp' },
+      { id: 34, name: 'Ngoài mặt - Cười tươi 90 độ nghiêng phải', slide: 'Slide 23', note: '★ Nạp cho Khung 2 tổng hợp' },
+      { id: 35, name: 'Ngoài mặt - Cười tươi 90 độ nghiêng trái', slide: 'Slide 23', note: '★ Nạp cho Khung 2 tổng hợp' },
+      { id: 36, name: 'Đường thở: Há lớn chụp vào lưỡi gà', slide: 'Slide 24', note: '' },
+      { id: 37, name: 'Đường thở: Chụp đường thở mũi', slide: 'Slide 24', note: 'Mới bổ sung theo yêu cầu' },
+      { id: 38, name: 'Đường thở: Lè lưỡi tối đa', slide: 'Slide 24', note: '' },
+      { id: 39, name: 'Khuôn miệng: Khuôn miệng nói "ê"', slide: 'Slide 24', note: 'Mới bổ sung theo yêu cầu' },
+      { id: 40, name: 'Đo đạc khớp cắn 9mm', slide: 'Slide 25', note: '★ Sang Slide 24 hàng 1 ô 1' },
+      { id: 41, name: 'Đo đạc khớp cắn 7mm', slide: 'Slide 25', note: '★ Sang Slide 24 hàng 1 ô 3' },
+      { id: 42, name: 'Đo đạc khớp cắn 13mm', slide: 'Slide 26', note: '★ Sang Slide 24 hàng 1 ô 2' },
+      { id: 43, name: 'Phim X-quang Panorama / Cephalo', slide: 'Slide 27', note: 'Vào Slide 27' },
+      { id: 44, name: 'Phim đường thở', slide: 'Slide 28', note: 'Vào Slide 28' },
+      { id: 45, name: 'Phim TMJ cung 1 (Hình 1)', slide: 'Slide 29', note: '' },
+      { id: 46, name: 'Phim TMJ cung 1 (Hình 2)', slide: 'Slide 29', note: '' },
+      { id: 47, name: 'Phim TMJ cung 1 (Hình 3)', slide: 'Slide 29', note: '' },
+      { id: 48, name: 'Phim TMJ cung 2 (Hình 1)', slide: 'Slide 30', note: '' },
+      { id: 49, name: 'Phim TMJ cung 2 (Hình 2)', slide: 'Slide 30', note: '' },
+      { id: 50, name: 'Phim TMJ cung 2 (Hình 3)', slide: 'Slide 30', note: '' },
+      { id: 51, name: 'Xem cả 2 bên TMJ (Hình 1)', slide: 'Slide 31', note: '' },
+      { id: 52, name: 'Xem cả 2 bên TMJ (Hình 2)', slide: 'Slide 31', note: '' }
+    ];
+
+    function renderGuideTable() {
+      const tbody = document.getElementById('guideTableBody');
+      tbody.innerHTML = '';
+      namingGuide.forEach(item => {
+        const tr = document.createElement('tr');
+        const hasStar = item.note.includes('★');
+        tr.className = hasStar ? 'bg-emerald-50/40 font-medium' : '';
+        tr.innerHTML = `
+          <td class="p-2 border-r border-slate-200 text-center font-bold text-slate-800"><code>${item.id}.jpg</code></td>
+          <td class="p-2 border-r border-slate-200 text-slate-800">${item.name}</td>
+          <td class="p-2 border-r border-slate-200 text-center text-slate-600 font-semibold">${item.slide}</td>
+          <td class="p-2 text-emerald-700 font-semibold">${item.note}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    async function loadData() {
+      try {
+        const res = await fetch('/api/slides');
+        slidesData = await res.json();
+        renderSlides('all');
+        renderGuideTable();
+      } catch (e) {
+        console.error('Failed to load slides:', e);
+      }
+    }
+
+    function renderSlides(catFilter) {
+      const container = document.getElementById('slidesContainer');
+      container.innerHTML = '';
+
+      const filtered = (catFilter === 'all') ? slidesData : slidesData.filter(s => s.category === catFilter);
+
+      filtered.forEach(slide => {
+        const card = document.createElement('div');
+        card.className = 'slide-card bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden';
+
+        let contentArea = '';
+
+        if (slide.type === 'info') {
+          contentArea = `
+            <div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+              <span class="flex items-center"><i class="fa-solid fa-pen-to-square mr-1.5 text-blue-500"></i> ${slide.description}</span>
+              <span class="text-emerald-700 font-bold"><i class="fa-solid fa-check-circle mr-1"></i> Tự động điền</span>
+            </div>
+          `;
+        } else if (slide.type === 'auto_composite') {
+          contentArea = `
+            <div class="p-3 bg-emerald-50/70 border-t border-emerald-200 text-xs text-emerald-800 leading-relaxed flex items-center justify-between">
+              <div><i class="fa-solid fa-wand-magic-sparkles text-emerald-600 mr-1.5"></i> ${slide.description}</div>
+              <span class="px-2 py-1 bg-emerald-200 text-emerald-900 rounded font-bold whitespace-nowrap ml-2">Tự nhân bản 100%</span>
+            </div>
+          `;
+        } else if (slide.slots && slide.slots.length > 0) {
+          const slotsHtml = slide.slots.map(slot => {
+            const isFilled = !!selectedFiles[slot.id];
+            return `
+              <div class="drop-zone border rounded-lg p-2 flex items-center justify-between cursor-pointer ${isFilled ? 'bg-emerald-50/60 border-emerald-400' : 'bg-slate-50 border-slate-200 hover:border-emerald-400'}" data-slot-id="${slot.id}">
+                <div class="flex items-center space-x-2.5">
+                  <div class="w-12 h-12 bg-white rounded border border-slate-200 overflow-hidden flex items-center justify-center relative">
+                    ${isFilled ? `
+                      <img src="${selectedFiles[slot.id].previewUrl}" class="w-full h-full object-cover">
+                      <div class="absolute inset-0 bg-emerald-600/30 flex items-center justify-center text-white text-xs"><i class="fa-solid fa-check"></i></div>
+                    ` : `
+                      <i class="fa-regular fa-image text-slate-300 text-base"></i>
+                    `}
+                  </div>
+                  <div>
+                    <div class="flex items-center space-x-1.5">
+                      <span class="text-[11px] font-bold text-slate-800">File: <code>${slot.fileName}</code></span>
+                      ${slot.sync ? `<span class="text-[9px] bg-blue-100 text-blue-700 font-bold px-1.5 py-0.2 rounded" title="${slot.sync}">Đồng bộ ${slot.sync}</span>` : ''}
+                    </div>
+                    <div class="text-xs text-slate-600 font-medium">${slot.label}</div>
+                  </div>
+                </div>
+                <div>
+                  ${isFilled ? `
+                    <button class="btn-remove-slot text-red-500 hover:text-red-700 text-xs px-2 py-1 rounded" data-remove-id="${slot.id}">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  ` : `
+                    <button class="text-emerald-700 hover:text-emerald-900 text-xs font-semibold px-2.5 py-1 bg-white border border-slate-200 rounded shadow-xs">
+                      Chọn ảnh
+                    </button>
+                  `}
+                </div>
+              </div>
+            `;
+          }).join('');
+
+          contentArea = `
+            <div class="p-3 border-t border-slate-100 space-y-2">
+              ${slide.description ? `<div class="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-1 rounded mb-2 font-medium"><i class="fa-solid fa-circle-check mr-1"></i> ${slide.description}</div>` : ''}
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Các vị trí ảnh cần nạp cho slide này:</div>
+              <div class="grid grid-cols-1 md:grid-cols-${Math.min(slide.slots.length, 3)} gap-2">
+                ${slotsHtml}
+              </div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <div class="p-3.5 flex items-center justify-between bg-white">
+            <div class="flex items-center space-x-3">
+              <span class="px-2 py-1 bg-brand-navy text-white text-xs font-black rounded-md">
+                Slide ${String(slide.slideNum).padStart(2, '0')} / 31
+              </span>
+              <div>
+                <h3 class="text-sm font-bold text-slate-800">${slide.title}</h3>
+                <span class="text-[11px] text-slate-500">${slide.category}</span>
+              </div>
+            </div>
+            <div>
+              <button class="btn-zoom-slide px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-lg flex items-center transition" data-preview="${slide.preview}" data-title="Slide ${slide.slideNum}: ${slide.title}">
+                <i class="fa-solid fa-eye mr-1.5 text-blue-600"></i> Xem slide hoàn chỉnh
+              </button>
+            </div>
+          </div>
+          ${contentArea}
+        `;
+
+        card.querySelectorAll('.drop-zone').forEach(dz => {
+          const sId = parseInt(dz.dataset.slotId, 10);
+
+          dz.addEventListener('click', (e) => {
+            if (e.target.closest('.btn-remove-slot')) {
+              e.stopPropagation();
+              delete selectedFiles[sId];
+              renderSlides(getActiveCat());
+              return;
+            }
+            const inp = document.createElement('input');
+            inp.type = 'file';
+            inp.accept = 'image/*,video/*';
+            inp.onchange = (ev) => {
+              if (ev.target.files.length > 0) {
+                handleFileSelect(sId, ev.target.files[0]);
+              }
+            };
+            inp.click();
+          });
+
+          dz.addEventListener('dragover', (e) => { e.preventDefault(); dz.classList.add('drag-over'); });
+          dz.addEventListener('dragleave', () => { dz.classList.remove('drag-over'); });
+          dz.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dz.classList.remove('drag-over');
+            if (e.dataTransfer.files.length > 0) {
+              handleFileSelect(sId, e.dataTransfer.files[0]);
+            }
+          });
+        });
+
+        card.querySelector('.btn-zoom-slide').addEventListener('click', (e) => {
+          const btn = e.currentTarget;
+          document.getElementById('zoomImage').src = btn.dataset.preview;
+          document.getElementById('zoomTitle').innerText = btn.dataset.title;
+          document.getElementById('zoomModal').classList.remove('hidden');
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    let lastErrorDetails = '';
+
+    async function uploadSlotFile(slotId, file) {
+      try {
+        const url = `/api/upload?slot=${slotId}&filename=${encodeURIComponent(file.name)}`;
+        const res = await fetch(url, {
+          method: 'POST',
+          body: file
+        });
+        const data = await res.json();
+        if (data.success) {
+          selectedFiles[slotId] = {
+            file: file,
+            path: data.savedPath,
+            previewUrl: URL.createObjectURL(file)
+          };
+          return data.savedPath;
+        } else {
+          console.error("Upload error for slot " + slotId + ":", data.error);
+          return null;
+        }
+      } catch (e) {
+        console.error("Upload exception for slot " + slotId + ":", e);
+        return null;
+      }
+    }
+
+    async function handleFileSelect(slotId, file) {
+      selectedFiles[slotId] = {
+        file: file,
+        path: '',
+        previewUrl: URL.createObjectURL(file)
+      };
+      renderSlides(getActiveCat());
+      await uploadSlotFile(slotId, file);
+      renderSlides(getActiveCat());
+    }
+
+    function getActiveCat() {
+      const activeBtn = document.querySelector('.cat-tab.active');
+      return activeBtn ? activeBtn.dataset.cat : 'all';
+    }
+
+    document.getElementById('categoryTabs').addEventListener('click', (e) => {
+      const tab = e.target.closest('.cat-tab');
+      if (!tab) return;
+      document.querySelectorAll('.cat-tab').forEach(t => {
+        t.classList.remove('active', 'bg-brand-navy', 'text-white');
+        t.classList.add('text-slate-600');
+      });
+      tab.classList.add('active', 'bg-brand-navy', 'text-white');
+      tab.classList.remove('text-slate-600');
+      renderSlides(tab.dataset.cat);
+    });
+
+    document.getElementById('btnCloseZoomModal').addEventListener('click', () => {
+      document.getElementById('zoomModal').classList.add('hidden');
+    });
+
+    document.getElementById('btnOpenGuideModal').addEventListener('click', () => {
+      document.getElementById('guideModal').classList.remove('hidden');
+    });
+    document.getElementById('btnCloseGuideModal').addEventListener('click', () => {
+      document.getElementById('guideModal').classList.add('hidden');
+    });
+    document.getElementById('btnCloseGuideModalBtn').addEventListener('click', () => {
+      document.getElementById('guideModal').classList.add('hidden');
+    });
+
+    // 1. Quét thư mục ảnh trực tiếp trên máy
+    document.getElementById('btnScanFolder').addEventListener('click', async () => {
+      const pathInput = document.getElementById('localFolderPathInput');
+      const folderPath = pathInput.value.trim();
+      if (!folderPath) {
+        alert('Vui lòng dán đường dẫn thư mục ảnh trên máy tính của bạn vào ô nhập!');
+        pathInput.focus();
+        return;
+      }
+
+      const btn = document.getElementById('btnScanFolder');
+      const origHtml = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-1"></i> Đang quét...';
+      btn.disabled = true;
+
+      try {
+        const resp = await fetch('/api/scan_folder', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ folderPath: folderPath })
+        });
+        const res = await resp.json();
+        if (res.success) {
+          let count = 0;
+          for (const [id, fPath] of Object.entries(res.slotFiles)) {
+            selectedFiles[id] = {
+              file: null,
+              path: fPath,
+              previewUrl: ''
+            };
+            count++;
+          }
+          alert(`Đã nhận diện thành công ${count} ảnh từ thư mục "${folderPath}"!`);
+          renderSlides(getActiveCat());
+        } else {
+          alert('Lỗi: ' + (res.error || 'Không thể quét thư mục. Vui lòng kiểm tra lại đường dẫn.'));
+        }
+      } catch (err) {
+        alert('Không thể kết nối đến máy chủ: ' + err.message);
+      } finally {
+        btn.innerHTML = origHtml;
+        btn.disabled = false;
+      }
+    });
+
+    // 2. Chọn thư mục nạp hàng loạt qua trình duyệt
+    const folderInput = document.getElementById('folderInput');
+    document.getElementById('btnAutoMatchFolder').addEventListener('click', () => folderInput.click());
+    folderInput.addEventListener('change', async (e) => {
+      const files = Array.from(e.target.files);
+      const matchedFiles = [];
+      files.forEach(file => {
+        const match = file.name.match(/^(\d+)/);
+        if (match) {
+          const num = parseInt(match[1], 10);
+          if (num >= 1 && num <= 52) {
+            matchedFiles.push({ num, file });
+          }
+        }
+      });
+
+      if (matchedFiles.length === 0) {
+        alert('Không tìm thấy ảnh nào được đặt tên theo số (1.jpg đến 52.jpg) trong thư mục vừa chọn!');
+        return;
+      }
+
+      // Show upload progress modal
+      const modal = document.getElementById('progressModal');
+      const loadSec = document.getElementById('modalLoadingSection');
+      const succSec = document.getElementById('modalSuccessSection');
+      const errSec = document.getElementById('modalErrorSection');
+      const title = document.getElementById('modalLoadingTitle');
+      const desc = document.getElementById('modalLoadingDesc');
+      const pWrap = document.getElementById('modalProgressBarWrap');
+      const pBar = document.getElementById('modalProgressBar');
+
+      modal.classList.remove('hidden');
+      loadSec.classList.remove('hidden');
+      succSec.classList.add('hidden');
+      errSec.classList.add('hidden');
+      pWrap.classList.remove('hidden');
+      title.innerText = 'Đang nạp ảnh vào hệ thống...';
+
+      let done = 0;
+      for (const item of matchedFiles) {
+        desc.innerText = `Đang tải: ${item.file.name} (${done + 1} / ${matchedFiles.length})...`;
+        pBar.style.width = Math.round(((done) / matchedFiles.length) * 100) + '%';
+        
+        selectedFiles[item.num] = {
+          file: item.file,
+          path: '',
+          previewUrl: URL.createObjectURL(item.file)
+        };
+        await uploadSlotFile(item.num, item.file);
+        done++;
+      }
+      pBar.style.width = '100%';
+
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        pWrap.classList.add('hidden');
+        renderSlides(getActiveCat());
+        alert(`Đã nạp và đồng bộ thành công ${matchedFiles.length} ảnh vào đúng vị trí 31 slide!`);
+      }, 400);
+    });
+
+    let defaultDownloadsFolder = 'C:\\Users\\PC\\Downloads';
+
+    async function fetchDefaultFolder() {
+      try {
+        const res = await fetch('/api/default_folder');
+        const data = await res.json();
+        if (data.success && data.defaultFolder) {
+          defaultDownloadsFolder = data.defaultFolder;
+        }
+      } catch (e) {
+        console.error('Error fetching default folder:', e);
+      }
+    }
+
+    // 3. XUẤT 31 SLIDE POWERPOINT (Mở hộp thoại xác nhận thư mục xuất)
+    document.getElementById('btnGenerate').addEventListener('click', () => {
+      const pName = document.getElementById('patientName').value.trim() || 'Bệnh Nhân';
+      const pYear = document.getElementById('birthYear').value.trim() || '1996';
+      const pDoc = document.getElementById('doctorName').value.trim() || 'Lê Võ Yến Nhi';
+      const fileName = `${pName} - ${pYear} - ${pDoc}.pptx`;
+
+      document.getElementById('confirmFileNamePreview').innerText = fileName;
+      document.getElementById('confirmExportFolderInput').value = defaultDownloadsFolder;
+      document.getElementById('exportConfirmModal').classList.remove('hidden');
+    });
+
+    document.getElementById('btnCancelExport').addEventListener('click', () => {
+      document.getElementById('exportConfirmModal').classList.add('hidden');
+    });
+
+    document.getElementById('btnStartExport').addEventListener('click', async () => {
+      document.getElementById('exportConfirmModal').classList.add('hidden');
+      const chosenFolder = document.getElementById('confirmExportFolderInput').value.trim() || defaultDownloadsFolder;
+      await doGeneratePptx(chosenFolder);
+    });
+
+    async function doGeneratePptx(exportFolder) {
+      const modal = document.getElementById('progressModal');
+      const loadSec = document.getElementById('modalLoadingSection');
+      const succSec = document.getElementById('modalSuccessSection');
+      const errSec = document.getElementById('modalErrorSection');
+      const title = document.getElementById('modalLoadingTitle');
+      const desc = document.getElementById('modalLoadingDesc');
+      const pWrap = document.getElementById('modalProgressBarWrap');
+      const succPath = document.getElementById('modalSuccessPath');
+      const errMsg = document.getElementById('modalErrorMsg');
+      const detailBox = document.getElementById('modalDetailBox');
+
+      modal.classList.remove('hidden');
+      loadSec.classList.remove('hidden');
+      succSec.classList.add('hidden');
+      errSec.classList.add('hidden');
+      pWrap.classList.add('hidden');
+      title.innerText = 'Đang xuất 31 Slide PowerPoint...';
+      desc.innerText = 'Đang gắn logo thương hiệu, cập nhật thông tin và tạo các khung ảnh bo tròn...';
+
+      // Ensure any pending file uploads are complete
+      for (const [id, item] of Object.entries(selectedFiles)) {
+        if (!item.path && item.file) {
+          desc.innerText = `Đang chuẩn bị ảnh slot ${id}...`;
+          await uploadSlotFile(id, item.file);
+        }
+      }
+
+      const payload = {
+        PatientName: document.getElementById('patientName').value.trim() || 'Bệnh Nhân',
+        BirthYear: document.getElementById('birthYear').value.trim() || '1996',
+        DoctorName: document.getElementById('doctorName').value.trim() || 'Lê Võ Yến Nhi',
+        ClinicBranch: document.getElementById('clinicBranch').value.trim() || 'Tp. Hồ Chí Minh',
+        ChiefComplaint: document.getElementById('chiefComplaint').value.trim(),
+        DentalHistory: document.getElementById('dentalHistory').value.trim(),
+        OutputFolder: exportFolder,
+        SlotFiles: {}
+      };
+
+      for (const [id, item] of Object.entries(selectedFiles)) {
+        if (item.path) {
+          payload.SlotFiles[id] = item.path;
+        }
+      }
+
+      try {
+        const res = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await res.json();
+        
+        loadSec.classList.add('hidden');
+
+        if (result.success) {
+          lastGeneratedFilePath = result.outputPath;
+          succPath.innerText = result.outputPath;
+          succSec.classList.remove('hidden');
+        } else {
+          lastErrorDetails = result.detail || result.log || result.error || 'Chi tiết lỗi không có sẵn.';
+          errMsg.innerText = result.error || 'Không thể tạo file PowerPoint.';
+          detailBox.innerText = lastErrorDetails;
+          errSec.classList.remove('hidden');
+        }
+      } catch (err) {
+        loadSec.classList.add('hidden');
+        lastErrorDetails = err.stack || err.message;
+        errMsg.innerText = 'Lỗi kết nối máy chủ: ' + err.message;
+        detailBox.innerText = lastErrorDetails;
+        errSec.classList.remove('hidden');
+      }
+    }
+
+    // Toggle Technical Detail Box
+    document.getElementById('btnToggleDetail').addEventListener('click', () => {
+      const box = document.getElementById('modalDetailBox');
+      const icon = document.getElementById('iconDetailChevron');
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        icon.className = 'fa-solid fa-chevron-down text-[10px]';
+      } else {
+        box.classList.add('hidden');
+        icon.className = 'fa-solid fa-chevron-right text-[10px]';
+      }
+    });
+
+    // Copy Error Button
+    document.getElementById('btnCopyError').addEventListener('click', () => {
+      const textToCopy = "LỖI XUẤT SLIDE POWERPOINT:\n" + document.getElementById('modalErrorMsg').innerText + "\n\nCHI TIẾT LOG:\n" + lastErrorDetails;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btn = document.getElementById('btnCopyError');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check mr-1.5 text-emerald-600"></i> Đã sao chép!';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      });
+    });
+
+    // Close Modal Buttons
+    document.querySelectorAll('.btnCloseModalBtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('progressModal').classList.add('hidden');
+      });
+    });
+
+    // Open Generated PPTX
+    document.getElementById('btnOpenPptx').addEventListener('click', async () => {
+      if (lastGeneratedFilePath) {
+        await fetch('/api/open', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ path: lastGeneratedFilePath })
+        });
+      }
+    });
+
+    // Open Folder containing generated PPTX
+    document.getElementById('btnOpenFolder').addEventListener('click', async () => {
+      if (lastGeneratedFilePath) {
+        const lastFolder = lastGeneratedFilePath.substring(0, lastGeneratedFilePath.lastIndexOf('\\'));
+        await fetch('/api/open_folder', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ folder: lastFolder })
+        });
+      }
+    });
+
+    fetchDefaultFolder();
+    loadData();
+  </script>
+</body>
+</html>

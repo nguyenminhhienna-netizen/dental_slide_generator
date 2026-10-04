@@ -1,0 +1,576 @@
+[
+    {
+        "slideNum":  1,
+        "preview":  "/thumbs/slide_1.jpg",
+        "type":  "info",
+        "description":  "Tự động lấy Họ tên, Năm sinh, Bác sĩ điều trị và Cơ sở từ form bên trái.",
+        "category":  "Thông tin chung",
+        "title":  "Trang Bìa - Thông Tin Bệnh Nhân",
+        "slots":  [
+
+                  ]
+    },
+    {
+        "slideNum":  2,
+        "preview":  "/thumbs/slide_2.jpg",
+        "type":  "info",
+        "description":  "Tự động điền các triệu chứng than phiền chính từ form bên trái.",
+        "category":  "Thông tin chung",
+        "title":  "Chief Complain (Lý Do Đến Khám)",
+        "slots":  [
+
+                  ]
+    },
+    {
+        "slideNum":  3,
+        "preview":  "/thumbs/slide_3.jpg",
+        "type":  "info",
+        "description":  "Tự động điền tiền sử chỉnh nha, bệnh lý răng miệng từ form bên trái.",
+        "category":  "Thông tin chung",
+        "title":  "Dental History (Tiền Sử Nha Khoa)",
+        "slots":  [
+
+                  ]
+    },
+    {
+        "slideNum":  4,
+        "preview":  "/thumbs/slide_4.jpg",
+        "type":  "photos",
+        "category":  "Cột sống",
+        "title":  "Ảnh Đánh Giá Cột Sống",
+        "slots":  [
+                      {
+                          "label":  "Cột sống - Đứng thẳng",
+                          "fileName":  "1.jpg",
+                          "id":  1
+                      },
+                      {
+                          "label":  "Cột sống - Đứng nghiêng",
+                          "fileName":  "2.jpg",
+                          "id":  2
+                      }
+                  ]
+    },
+    {
+        "slideNum":  5,
+        "preview":  "/thumbs/slide_5.jpg",
+        "type":  "photos",
+        "category":  "Ngoài mặt",
+        "title":  "Ảnh Ngoài Mặt",
+        "slots":  [
+                      {
+                          "label":  "Mặt thẳng nghỉ",
+                          "fileName":  "3.jpg",
+                          "sync":  "Slide 22, 23",
+                          "id":  3
+                      },
+                      {
+                          "label":  "Mặt thẳng cười",
+                          "fileName":  "4.jpg",
+                          "sync":  "Slide 22, 23",
+                          "id":  4
+                      },
+                      {
+                          "label":  "Ngoài mặt - Nghiêng phải",
+                          "fileName":  "5.jpg",
+                          "sync":  "Slide 6, 22, 23",
+                          "id":  5
+                      }
+                  ]
+    },
+    {
+        "slideNum":  6,
+        "preview":  "/thumbs/slide_6.jpg",
+        "type":  "photos",
+        "description":  "Ảnh bên trái TỰ ĐỘNG ĐỒNG BỘ từ Ảnh 5.jpg (Nghiêng phải), nạp thêm Ảnh 6.jpg (Nghiêng trái) vào ô bên phải.",
+        "category":  "Ngoài mặt",
+        "title":  "Ảnh Góc Nghiêng Môi Tự Nhiên",
+        "slots":  [
+                      {
+                          "label":  "Nghiêng trái tự nhiên",
+                          "fileName":  "6.jpg",
+                          "id":  6
+                      }
+                  ]
+    },
+    {
+        "slideNum":  7,
+        "preview":  "/thumbs/slide_7.jpg",
+        "type":  "photos",
+        "category":  "Ngoài mặt",
+        "title":  "Khép Môi Kín \u0026 Hơi Hở Môi Thư Giãn",
+        "slots":  [
+                      {
+                          "label":  "Khép môi kín",
+                          "fileName":  "7.jpg",
+                          "id":  7
+                      },
+                      {
+                          "label":  "Hở môi thư giãn",
+                          "fileName":  "8.jpg",
+                          "id":  8
+                      }
+                  ]
+    },
+    {
+        "slideNum":  8,
+        "preview":  "/thumbs/slide_8.jpg",
+        "type":  "photos",
+        "category":  "Ngoài mặt",
+        "title":  "Cười Tươi \u0026 Vừa Cười Vừa Há Hở Răng",
+        "slots":  [
+                      {
+                          "label":  "Cười tươi",
+                          "fileName":  "9.jpg",
+                          "sync":  "Slide 22, 23",
+                          "id":  9
+                      },
+                      {
+                          "label":  "Vừa cười vừa há hở răng cửa dưới",
+                          "fileName":  "10.jpg",
+                          "id":  10
+                      }
+                  ]
+    },
+    {
+        "slideNum":  9,
+        "preview":  "/thumbs/slide_9.jpg",
+        "type":  "photos",
+        "category":  "Ngoài mặt",
+        "title":  "Cười Lớn Lộ Răng Góc Nghiêng",
+        "slots":  [
+                      {
+                          "label":  "Cười lớn nghiêng trái",
+                          "fileName":  "11.jpg",
+                          "id":  11
+                      },
+                      {
+                          "label":  "Cười lớn nghiêng phải",
+                          "fileName":  "12.jpg",
+                          "id":  12
+                      }
+                  ]
+    },
+    {
+        "slideNum":  10,
+        "preview":  "/thumbs/slide_10.jpg",
+        "type":  "photos",
+        "category":  "Khớp cắn",
+        "title":  "Cắn Chặt \u0026 Để Hở Răng Cửa Có Banh Miệng",
+        "slots":  [
+                      {
+                          "label":  "Cắn chặt trực diện",
+                          "fileName":  "13.jpg",
+                          "sync":  "Slide 13, 22",
+                          "id":  13
+                      },
+                      {
+                          "label":  "Để hở răng cửa trực diện",
+                          "fileName":  "14.jpg",
+                          "sync":  "Slide 22",
+                          "id":  14
+                      }
+                  ]
+    },
+    {
+        "slideNum":  11,
+        "preview":  "/thumbs/slide_11.jpg",
+        "type":  "photos",
+        "category":  "Khớp cắn",
+        "title":  "Cắn Chặt Răng Bên Trái – Bên Phải",
+        "slots":  [
+                      {
+                          "label":  "Cắn chặt bên trái",
+                          "fileName":  "15.jpg",
+                          "sync":  "Slide 22",
+                          "id":  15
+                      },
+                      {
+                          "label":  "Cắn chặt bên phải",
+                          "fileName":  "16.jpg",
+                          "sync":  "Slide 22",
+                          "id":  16
+                      }
+                  ]
+    },
+    {
+        "slideNum":  12,
+        "preview":  "/thumbs/slide_12.jpg",
+        "type":  "photos",
+        "category":  "Khớp cắn",
+        "title":  "Chụp Xiên Không Banh Môi Lấy Mặt Trong \u0026 Mặt Nhai",
+        "slots":  [
+                      {
+                          "label":  "Mặt trong răng bên trái",
+                          "fileName":  "17.jpg",
+                          "id":  17
+                      },
+                      {
+                          "label":  "Mặt trong răng bên phải",
+                          "fileName":  "18.jpg",
+                          "id":  18
+                      }
+                  ]
+    },
+    {
+        "slideNum":  13,
+        "preview":  "/thumbs/slide_13.jpg",
+        "type":  "photos",
+        "description":  "Ảnh cắn chặt trực diện bên trái đã được TỰ ĐỘNG ĐỒNG BỘ từ Ảnh 13.jpg.",
+        "category":  "Khớp cắn",
+        "title":  "Cắn Chặt \u0026 Cắn Ra Trước Đối Đầu Nhau",
+        "slots":  [
+                      {
+                          "label":  "Cắn ra trước đối đầu nhau",
+                          "fileName":  "19.jpg",
+                          "sync":  "Slide 23",
+                          "id":  19
+                      }
+                  ]
+    },
+    {
+        "slideNum":  14,
+        "preview":  "/thumbs/slide_14.jpg",
+        "type":  "photos",
+        "category":  "Khớp cắn",
+        "title":  "Cắn Ra Trước Bên Trái \u0026 Bên Phải",
+        "slots":  [
+                      {
+                          "label":  "Cắn ra trước bên trái",
+                          "fileName":  "20.jpg",
+                          "sync":  "Slide 23",
+                          "id":  20
+                      },
+                      {
+                          "label":  "Cắn ra trước bên phải",
+                          "fileName":  "21.jpg",
+                          "sync":  "Slide 23",
+                          "id":  21
+                      }
+                  ]
+    },
+    {
+        "slideNum":  15,
+        "preview":  "/thumbs/slide_15.jpg",
+        "type":  "photos",
+        "category":  "Vận động hàm",
+        "title":  "Trượt Đối Đỉnh Răng Nanh Trái \u0026 Phải",
+        "slots":  [
+                      {
+                          "label":  "Trượt đối đỉnh nanh trái",
+                          "fileName":  "22.jpg",
+                          "id":  22,
+                          "sync":  "Slide 17"
+                      },
+                      {
+                          "label":  "Trượt đối đỉnh nanh phải",
+                          "fileName":  "23.jpg",
+                          "id":  23,
+                          "sync":  "Slide 16"
+                      }
+                  ]
+    },
+    {
+        "slideNum":  16,
+        "preview":  "/thumbs/slide_16.jpg",
+        "type":  "photos",
+        "category":  "Vận động hàm",
+        "title":  "Trượt Răng Nanh Sang Phải (Trực Diện \u0026 2 Bên)",
+        "slots":  [
+                      {
+                          "id":  24,
+                          "fileName":  "24.jpg",
+                          "label":  "Trực diện trượt phải",
+                          "sync":  "Slide 23"
+                      },
+                      {
+                          "id":  25,
+                          "fileName":  "25.jpg",
+                          "label":  "Bên trái trượt phải"
+                      }
+                  ],
+        "description":  "Ảnh bên phải đã được TỰ ĐỘNG ĐỒNG BỘ từ Ảnh 23.jpg (Trượt đối đỉnh nanh phải)."
+    },
+    {
+        "slideNum":  17,
+        "preview":  "/thumbs/slide_17.jpg",
+        "type":  "photos",
+        "category":  "Vận động hàm",
+        "title":  "Trượt Răng Nanh Sang Trái (Trực Diện \u0026 2 Bên)",
+        "slots":  [
+                      {
+                          "id":  26,
+                          "fileName":  "26.jpg",
+                          "label":  "Trực diện trượt trái",
+                          "sync":  "Slide 23"
+                      },
+                      {
+                          "id":  27,
+                          "fileName":  "27.jpg",
+                          "label":  "Bên phải trượt trái"
+                      }
+                  ],
+        "description":  "Ảnh bên trái đã được TỰ ĐỘNG ĐỒNG BỘ từ Ảnh 22.jpg (Trượt đối đỉnh nanh trái)."
+    },
+    {
+        "slideNum":  18,
+        "preview":  "/thumbs/slide_18.jpg",
+        "type":  "photos",
+        "category":  "Khớp cắn",
+        "title":  "Cắn Chặt \u0026 Lùi Hàm Hết Sức (Dưới Lên)",
+        "slots":  [
+                      {
+                          "label":  "Cắn chặt dưới lên",
+                          "fileName":  "28.jpg",
+                          "id":  28,
+                          "sync":  "Slide 22, 24"
+                      },
+                      {
+                          "label":  "Lùi hàm hết sức dưới lên",
+                          "fileName":  "29.jpg",
+                          "id":  29,
+                          "sync":  "Slide 24"
+                      }
+                  ]
+    },
+    {
+        "slideNum":  19,
+        "preview":  "/thumbs/slide_19.jpg",
+        "type":  "photos",
+        "category":  "Cung răng",
+        "title":  "Toàn Bộ Cung Răng Hàm Trên Qua Gương",
+        "slots":  [
+                      {
+                          "label":  "Cung răng hàm trên qua gương",
+                          "fileName":  "30.jpg",
+                          "sync":  "Slide 22, 23",
+                          "id":  30
+                      }
+                  ]
+    },
+    {
+        "slideNum":  20,
+        "preview":  "/thumbs/slide_20.jpg",
+        "type":  "photos",
+        "category":  "Cung răng",
+        "title":  "Chụp Cung Răng Hàm Dưới Qua Gương",
+        "slots":  [
+                      {
+                          "label":  "Cung răng hàm dưới qua gương",
+                          "fileName":  "31.jpg",
+                          "sync":  "Slide 22, 23",
+                          "id":  31
+                      }
+                  ]
+    },
+    {
+        "slideNum":  21,
+        "preview":  "/thumbs/slide_21.jpg",
+        "type":  "video",
+        "category":  "Video",
+        "title":  "Video Chu Trình Nhai Thật Của Bệnh Nhân",
+        "slots":  [
+                      {
+                          "label":  "Video hoặc ảnh chu trình nhai thật (.mp4 hoặc .jpg)",
+                          "fileName":  "32.mp4",
+                          "id":  32
+                      }
+                  ]
+    },
+    {
+        "slideNum":  22,
+        "preview":  "/thumbs/slide_22.jpg",
+        "type":  "photos",
+        "description":  "Khung 1 tổng hợp: Đã tự động ghép 10 ảnh (cột giữa dưới cùng là 28.jpg cắn chặt dưới lên). Cần nạp thêm 1 ảnh cười tươi 45° dưới đây:",
+        "category":  "Slide Tổng Hợp",
+        "title":  "Tổng Hợp Ảnh Vào 2 Khung (Khung 1)",
+        "slots":  [
+                      {
+                          "id":  33,
+                          "fileName":  "33.jpg",
+                          "label":  "Ngoài mặt - Cười tươi 45 độ nghiêng phải"
+                      }
+                  ]
+    },
+    {
+        "slideNum":  23,
+        "preview":  "/thumbs/slide_23.jpg",
+        "type":  "photos",
+        "description":  "Khung 2 tổng hợp: Đã tự động ghép 9 ảnh (cột giữa là 19.jpg, 24.jpg, 26.jpg). Cần nạp thêm 2 ảnh cười tươi 90° dưới đây:",
+        "category":  "Slide Tổng Hợp",
+        "title":  "Khung 2: Chú Ý 2 Ảnh Góc Dưới Là Tiến Ra Trước",
+        "slots":  [
+                      {
+                          "id":  34,
+                          "fileName":  "34.jpg",
+                          "label":  "Ngoài mặt - Cười tươi 90 độ nghiêng phải"
+                      },
+                      {
+                          "id":  35,
+                          "fileName":  "35.jpg",
+                          "label":  "Ngoài mặt - Cười tươi 90 độ nghiêng trái"
+                      }
+                  ]
+    },
+    {
+        "slideNum":  24,
+        "preview":  "/thumbs/slide_24.jpg",
+        "type":  "photos",
+        "category":  "Đường thở \u0026 Phim",
+        "title":  "Ảnh Đánh Giá Đường Thở",
+        "slots":  [
+                      {
+                          "id":  36,
+                          "fileName":  "36.jpg",
+                          "label":  "Đường thở: Há lớn chụp vào lưỡi gà"
+                      },
+                      {
+                          "id":  37,
+                          "fileName":  "37.jpg",
+                          "label":  "Đường thở: Chụp đường thở mũi"
+                      },
+                      {
+                          "id":  38,
+                          "fileName":  "38.jpg",
+                          "label":  "Đường thở: Lè lưỡi tối đa"
+                      },
+                      {
+                          "id":  39,
+                          "fileName":  "39.jpg",
+                          "label":  "Khuôn miệng: Khuôn miệng nói \"ê\""
+                      }
+                  ],
+        "description":  "Slide đường thở \u0026 khuôn miệng 9 ảnh: Hàng 1 đo đạc (40.jpg, 42.jpg, 41.jpg), hàng 2 đường thở (36, 37, 38), hàng 3 dưới lên \u0026 nói ê (28, 29, 39)."
+    },
+    {
+        "slideNum":  25,
+        "preview":  "/thumbs/slide_25.jpg",
+        "type":  "photos",
+        "category":  "Đo đạc \u0026 Phim",
+        "title":  "Đo Đạc Khớp Cắn: 9mm - 7mm",
+        "slots":  [
+                      {
+                          "label":  "Đo đạc 9mm",
+                          "fileName":  "40.jpg",
+                          "id":  40,
+                          "sync":  "Slide 24"
+                      },
+                      {
+                          "label":  "Đo đạc 7mm",
+                          "fileName":  "41.jpg",
+                          "id":  41,
+                          "sync":  "Slide 24"
+                      }
+                  ]
+    },
+    {
+        "slideNum":  26,
+        "preview":  "/thumbs/slide_26.jpg",
+        "type":  "photos",
+        "category":  "Đo đạc \u0026 Phim",
+        "title":  "Đo Đạc Khớp Cắn: 13mm",
+        "slots":  [
+                      {
+                          "label":  "Đo đạc 13mm",
+                          "fileName":  "42.jpg",
+                          "id":  42,
+                          "sync":  "Slide 24"
+                      }
+                  ]
+    },
+    {
+        "slideNum":  27,
+        "preview":  "/thumbs/slide_27.jpg",
+        "type":  "photos",
+        "category":  "Đo đạc \u0026 Phim",
+        "title":  "Phim X-Quang",
+        "slots":  [
+                      {
+                          "label":  "Phim X-quang toàn cảnh / sọ nghiêng",
+                          "fileName":  "43.jpg",
+                          "id":  43
+                      }
+                  ]
+    },
+    {
+        "slideNum":  28,
+        "preview":  "/thumbs/slide_28.jpg",
+        "type":  "photos",
+        "category":  "Đo đạc \u0026 Phim",
+        "title":  "Phim Đánh Giá Đường Thở",
+        "slots":  [
+                      {
+                          "label":  "Phim đường thở",
+                          "fileName":  "44.jpg",
+                          "id":  44
+                      }
+                  ]
+    },
+    {
+        "slideNum":  29,
+        "preview":  "/thumbs/slide_29.jpg",
+        "type":  "photos",
+        "category":  "Khớp TMJ",
+        "title":  "Phim TMJ Cung 1",
+        "slots":  [
+                      {
+                          "label":  "TMJ cung 1 (Hình 1)",
+                          "fileName":  "45.jpg",
+                          "id":  45
+                      },
+                      {
+                          "label":  "TMJ cung 1 (Hình 2)",
+                          "fileName":  "46.jpg",
+                          "id":  46
+                      },
+                      {
+                          "label":  "TMJ cung 1 (Hình 3)",
+                          "fileName":  "47.jpg",
+                          "id":  47
+                      }
+                  ]
+    },
+    {
+        "slideNum":  30,
+        "preview":  "/thumbs/slide_30.jpg",
+        "type":  "photos",
+        "category":  "Khớp TMJ",
+        "title":  "Phim TMJ Cung 2",
+        "slots":  [
+                      {
+                          "label":  "TMJ cung 2 (Hình 1)",
+                          "fileName":  "48.jpg",
+                          "id":  48
+                      },
+                      {
+                          "label":  "TMJ cung 2 (Hình 2)",
+                          "fileName":  "49.jpg",
+                          "id":  49
+                      },
+                      {
+                          "label":  "TMJ cung 2 (Hình 3)",
+                          "fileName":  "50.jpg",
+                          "id":  50
+                      }
+                  ]
+    },
+    {
+        "slideNum":  31,
+        "preview":  "/thumbs/slide_31.jpg",
+        "type":  "photos",
+        "category":  "Khớp TMJ",
+        "title":  "Xem Cả 2 Bên Khớp Thái Dương Hàm",
+        "slots":  [
+                      {
+                          "label":  "Xem cả 2 bên TMJ (Hình 1)",
+                          "fileName":  "51.jpg",
+                          "id":  51
+                      },
+                      {
+                          "label":  "Xem cả 2 bên TMJ (Hình 2)",
+                          "fileName":  "52.jpg",
+                          "id":  52
+                      }
+                  ]
+    }
+]

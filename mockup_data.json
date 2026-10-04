@@ -1,0 +1,44 @@
+{
+  "templatePptx": "D:\\Tổng Quát\\Khớp thái dương hàm\\2026\\T9.2026\\Nguyễn Vũ Bảo Ngọc - 1996 - Bs Nhi\\001\\Nguyễn Vũ Bảo Ngọc - 1996 - Bs Nhi.pptx",
+  "templatePptxFallback": "D:\\Tổng Quát\\Khớp thái dương hàm\\2026\\T9.2026\\Nguyễn Vũ Bảo Ngọc - 1996 - Bs Nhi\\Ban đầu\\Nguyễn Vũ Bảo Ngọc - 1996 - Bs Nhi.pptx",
+  "cover": {
+    "tag": "HỒ SƠ BỆNH ÁN KHỚP THÁI DƯƠNG HÀM",
+    "mainTitle": "ĐIỀU TRỊ KHỚP THÁI DƯƠNG HÀM",
+    "subTitle": "TEMPOROMANDIBULAR DISORDERS (TMD)",
+    "cardTitle": "THÔNG TIN BỆNH NHÂN & ĐIỀU TRỊ",
+    "nameLabel": "Họ và tên",
+    "nameVal": "NGUYỄN VŨ BẢO NGỌC",
+    "birthLabel": "Năm sinh",
+    "birthVal": "1996",
+    "doctorLabel": "Bác sĩ điều trị",
+    "doctorVal": "Dr. Lê Võ Yến Nhi",
+    "branchLabel": "Cơ sở tiếp nhận",
+    "branchVal": "Tp. Hồ Chí Minh",
+    "dateLabel": "Thời gian khám",
+    "dateVal": "Tháng 09 / 2026",
+    "slogan": "NHA KHOA THÙY ANH • CHUYÊN KHOA ĐIỀU TRỊ KHỚP THÁI DƯƠNG HÀM"
+  },
+  "slide5": {
+    "category": "KHÁM NGOÀI MẶT",
+    "title": "Tư thế nghỉ tự nhiên (3 góc độ)",
+    "patientTag": "BN: NGUYỄN VŨ BẢO NGỌC (1996)",
+    "captions": [
+      "Ảnh 3: Nghiêng phải 90°",
+      "Ảnh 4: Trực diện nghỉ",
+      "Ảnh 5: Nghiêng trái 90°"
+    ],
+    "footerLeft": "NHA KHOA THÙY ANH • CHUYÊN KHOA KHỚP THÁI DƯƠNG HÀM (TMD)",
+    "page": "Trang 05 / 31"
+  },
+  "slide10": {
+    "category": "KHÁM TRONG MIỆNG",
+    "title": "Khớp cắn trực diện & Để hở răng cửa",
+    "patientTag": "BN: NGUYỄN VŨ BẢO NGỌC (1996)",
+    "captions": [
+      "Ảnh 13: Cắn chặt trực diện",
+      "Ảnh 14: Để hở răng cửa"
+    ],
+    "footerLeft": "NHA KHOA THÙY ANH • CHUYÊN KHOA KHỚP THÁI DƯƠNG HÀM (TMD)",
+    "page": "Trang 10 / 31"
+  }
+}

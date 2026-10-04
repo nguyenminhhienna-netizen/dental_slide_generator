@@ -1,0 +1,80 @@
+﻿========================================================================================
+   NHA KHOA THÙY ANH - BẢNG ĐỔI TÊN ẢNH THEO ĐÚNG 31 SLIDE MẪU (ĐÃ CẬP NHẬT MỚI NHẤT)
+========================================================================================
+
+* Bộ slide xuất ra CHÍNH XÁC 31 TRANG SLIDE theo mẫu mới nhất của phòng khám.
+* Slide 12: Đã đổi tên thành "Mặt trong răng bên trái" (17.jpg) và "Mặt trong răng bên phải" (18.jpg).
+* Slide 16 (Bên phải): TỰ ĐỘNG ĐỒNG BỘ từ Ảnh 23.jpg (Trượt đối đỉnh nanh phải).
+* Slide 17 (Bên trái): TỰ ĐỘNG ĐỒNG BỘ từ Ảnh 22.jpg (Trượt đối đỉnh nanh trái).
+* Slide 22: Đã bổ sung ô nạp Ảnh cười tươi 45 độ nghiêng phải (33.jpg).
+* Slide 23: Đã bổ sung 2 ô nạp Ảnh cười tươi 90 độ nghiêng phải (34.jpg) & nghiêng trái (35.jpg).
+* Slide 24: Đã bổ sung Ảnh chụp đường thở mũi (37.jpg) và Khuôn miệng nói "ê" (39.jpg).
+* Đặt tên ảnh theo số: 1.jpg, 2.jpg, 3.jpg ... đến 52.jpg rồi chọn thư mục để nạp tự động toàn bộ.
+* Những ảnh có ghi [★ TỰ ĐỘNG NHÂN BẢN] sẽ tự động xuất hiện ở các slide tổng hợp,
+  bạn KHÔNG CẦN NẠP LẠI LẦN 2!
+
+----------------------------------------------------------------------------------------
+TÊN FILE      | GÓC CHỤP LÂM SÀNG                                  | NẰM Ở SLIDE
+----------------------------------------------------------------------------------------
+1.jpg         | Cột sống - Đứng thẳng                              | Slide 4
+2.jpg         | Cột sống - Đứng nghiêng                            | Slide 4
+3.jpg         | Ngoài mặt - Mặt thẳng nghỉ                         | Slide 5  [★ Sang Slide 22]
+4.jpg         | Ngoài mặt - Mặt thẳng cười                         | Slide 5  [★ Sang Slide 22]
+5.jpg         | Ngoài mặt - Nghiêng phải 90°                       | Slide 5  [★ Dùng chung Slide 6, 22, 23]
+6.jpg         | Ngoài mặt - Nghiêng trái tự nhiên                  | Slide 6  [★ Dùng chung Slide 6 & 23]
+7.jpg         | Ngoài mặt - Khép môi kín                           | Slide 7
+8.jpg         | Ngoài mặt - Hở môi thư giãn                        | Slide 7
+9.jpg         | Cười tươi                                          | Slide 8
+10.jpg        | Vừa cười vừa há hở răng cửa dưới                   | Slide 8  (Mẫu mới phòng khám)
+11.jpg        | Cười lớn lộ răng chụp nghiêng trái                 | Slide 9
+12.jpg        | Cười lớn lộ răng chụp nghiêng phải                 | Slide 9
+13.jpg        | Cắn chặt có banh miệng (Trực diện)                 | Slide 10 [★ Dùng chung Slide 13, 22]
+14.jpg        | Để hở răng cửa có banh miệng                       | Slide 10 [★ Sang Slide 22]
+15.jpg        | Cắn chặt bên trái                                  | Slide 11 [★ Sang Slide 22]
+16.jpg        | Cắn chặt bên phải                                  | Slide 11 [★ Sang Slide 22]
+17.jpg        | Mặt trong răng bên trái                            | Slide 12 (Đã đổi tên theo yêu cầu)
+18.jpg        | Mặt trong răng bên phải                            | Slide 12 (Đã đổi tên theo yêu cầu)
+----------------------------------------------------------------------------------------
+>>> SLIDE 13: Ảnh trái ĐÃ TỰ ĐỘNG LẤY TỪ 13.jpg, chỉ cần nạp ảnh bên phải:
+----------------------------------------------------------------------------------------
+19.jpg        | Cắn ra trước đối đầu nhau                          | Slide 13 [★ Sang Slide 23]
+20.jpg        | Cắn ra trước bên trái                              | Slide 14 [★ Sang Slide 23]
+21.jpg        | Cắn ra trước bên phải                              | Slide 14 [★ Sang Slide 23]
+22.jpg        | Trượt đối đỉnh răng nanh bên trái                  | Slide 15 [★ Dùng chung Slide 17 ảnh trái]
+23.jpg        | Trượt đối đỉnh răng nanh bên phải                  | Slide 15 [★ Dùng chung Slide 16 ảnh phải]
+24.jpg        | Trượt răng nanh sang phải - Trực diện              | Slide 16 [★ Sang Slide 23]
+25.jpg        | Trượt răng nanh sang phải - Bên trái               | Slide 16 (Ảnh phải tự lấy từ 23.jpg)
+26.jpg        | Trượt răng nanh sang trái - Trực diện              | Slide 17 (Ảnh trái tự lấy từ 22.jpg) [★ Sang Slide 23]
+27.jpg        | Trượt răng nanh sang trái - Bên phải               | Slide 17
+28.jpg        | Cắn chặt chụp từ dưới lên                          | Slide 18 [★ Sang Slide 22, 24]
+29.jpg        | Lùi hàm hết sức chụp từ dưới lên                   | Slide 18 [★ Sang Slide 24]
+30.jpg        | Toàn bộ hàm trên qua gương                         | Slide 19 [★ Sang Slide 22, 23]
+31.jpg        | Chụp hàm dưới qua gương                            | Slide 20 [★ Sang Slide 22, 23]
+32.mp4 / .jpg | Video hoặc ảnh chu trình nhai thật                 | Slide 21
+----------------------------------------------------------------------------------------
+>>> CÁC ẢNH NẠP BỔ SUNG CHO SLIDE TỔNG HỢP 22, 23 & ĐƯỜNG THỞ 24:
+----------------------------------------------------------------------------------------
+33.jpg        | Ngoài mặt - Cười tươi 45 độ nghiêng phải           | Slide 22 (Khung 1 tổng hợp)
+34.jpg        | Ngoài mặt - Cười tươi 90 độ nghiêng phải           | Slide 23 (Khung 2 tổng hợp)
+35.jpg        | Ngoài mặt - Cười tươi 90 độ nghiêng trái           | Slide 23 (Khung 2 tổng hợp)
+36.jpg        | Đường thở: Há lớn chụp vào lưỡi gà                 | Slide 24
+37.jpg        | Đường thở: Chụp đường thở mũi                      | Slide 24 (Mới bổ sung theo yêu cầu)
+38.jpg        | Đường thở: Lè lưỡi tối đa                          | Slide 24
+39.jpg        | Khuôn miệng: Khuôn miệng nói "ê"                   | Slide 24 (Mới bổ sung theo yêu cầu)
+----------------------------------------------------------------------------------------
+>>> CÁC ẢNH ĐO ĐẠC KHỚP CẮN & PHIM X-QUANG:
+----------------------------------------------------------------------------------------
+40.jpg        | Đo đạc khớp cắn 9mm                                | Slide 25 [★ Sang Slide 24 hàng 1 ô 1]
+41.jpg        | Đo đạc khớp cắn 7mm                                | Slide 25 [★ Sang Slide 24 hàng 1 ô 3]
+42.jpg        | Đo đạc khớp cắn 13mm                               | Slide 26 [★ Sang Slide 24 hàng 1 ô 2]
+43.jpg        | Phim X-quang Panorama / Cephalo                    | Slide 27
+44.jpg        | Phim đường thở                                     | Slide 28
+45.jpg        | Phim TMJ cung 1 (Hình 1)                           | Slide 29
+46.jpg        | Phim TMJ cung 1 (Hình 2)                           | Slide 29
+47.jpg        | Phim TMJ cung 1 (Hình 3)                           | Slide 29
+48.jpg        | Phim TMJ cung 2 (Hình 1)                           | Slide 30
+49.jpg        | Phim TMJ cung 2 (Hình 2)                           | Slide 30
+50.jpg        | Phim TMJ cung 2 (Hình 3)                           | Slide 30
+51.jpg        | Xem cả 2 bên TMJ (Hình 1)                          | Slide 31
+52.jpg        | Xem cả 2 bên TMJ (Hình 2)                          | Slide 31
+========================================================================================
